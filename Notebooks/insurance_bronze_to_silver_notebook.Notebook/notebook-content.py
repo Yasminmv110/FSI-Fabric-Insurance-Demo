@@ -23,7 +23,7 @@
 # CELL ********************
 
 # ============================================================
-# Fabric Notebook: Bronze â†’ Silver Transformation
+# Fabric Notebook: Bronze to Silver Transformation
 # Author   : Yasmin Udaipurwala
 # Purpose  : Read raw CSVs from Bronze, clean, deduplicate,
 #            enforce schema, and write to Silver Delta tables
@@ -38,9 +38,9 @@ from pyspark.sql.types import (
 )
 from datetime import datetime
 
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 # CONFIGURATION
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 
 BRONZE_BASE_PATH = "Files/Bronze_Raw_Data"   # Relative to Lakehouse root
 SILVER_SCHEMA    = "Silver"         # Silver schema/database name
@@ -150,7 +150,7 @@ COLUMN_TYPES = {
     },
 }
 
-# Date columns (string â†’ DateType) per table
+# Date columns (string to DateType) per table
 DATE_COLUMNS = {
     "policyholders":     ["date_of_birth"],
     "insured_assets":    ["last_inspection_date"],
@@ -195,9 +195,9 @@ NUMERIC_BOUNDS = {
     "asset_inspections": {"appraised_value": (0, 50_000_000)},
 }
 
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 # UTILITY FUNCTIONS
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 
 def log(msg: str):
     """Simple timestamped logger."""
@@ -279,7 +279,7 @@ def clean_zip_code(df: DataFrame) -> DataFrame:
 
 
 def apply_numeric_bounds(df: DataFrame, bounds: dict) -> DataFrame:
-    """Clip numeric columns to valid [min, max] range; out-of-range â†’ null."""
+    """Clip numeric columns to valid [min, max] range; out-of-range to null."""
     for col_name, (lo, hi) in bounds.items():
         if col_name in df.columns:
             df = df.withColumn(
@@ -299,10 +299,10 @@ def deduplicate(df: DataFrame, primary_key: str,
     2. For duplicate PKs, keep the row with the latest date_col value
        (or first occurrence if no date_col is available).
     """
-    # Step 1 â€“ exact row dedup
+    # Step 1  exact row dedup
     df = df.dropDuplicates()
 
-    # Step 2 â€“ PK-level dedup
+    # Step 2  PK-level dedup
     if date_col and date_col in df.columns:
         from pyspark.sql.window import Window
         w = (Window.partitionBy(primary_key)
@@ -311,7 +311,7 @@ def deduplicate(df: DataFrame, primary_key: str,
                 .filter(F.col("_row_num") == 1)
                 .drop("_row_num"))
     else:
-        # No date col â€“ keep first occurrence
+        # No date col  keep first occurrence
         from pyspark.sql.window import Window
         w = Window.partitionBy(primary_key).orderBy(F.monotonically_increasing_id())
         df = (df.withColumn("_row_num", F.row_number().over(w))
@@ -324,9 +324,9 @@ def add_silver_metadata(df: DataFrame, source_table: str,
                         not_null_cols: list) -> DataFrame:
     """
     Append Silver audit columns:
-      _silver_processed_ts  â€“ when the record was processed
-      _source               â€“ originating Bronze table name
-      _is_valid             â€“ True when all NOT NULL fields are populated
+      _silver_processed_ts   when the record was processed
+      _source                originating Bronze table name
+      _is_valid              True when all NOT NULL fields are populated
     """
     # Build validity check: all required cols must be non-null
     validity_expr = F.lit(True)
@@ -351,53 +351,53 @@ def write_silver_table(df: DataFrame, table_name: str,
        .option("mergeSchema", "true")
        .option("overwriteSchema", "true")
        .saveAsTable(full_table_name))
-    log(f"âœ…  Written to Delta table: {full_table_name}")
+    log(f"  Written to Delta table: {full_table_name}")
 
 
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 # MASTER TRANSFORMATION PIPELINE
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 
 def transform_table(table_name: str):
-    """Full Bronze â†’ Silver pipeline for a single table."""
+    """Full Bronze to Silver pipeline for a single table."""
     csv_path, pk, date_col = TABLE_CONFIG[table_name]
 
-    log(f"{'â”€'*60}")
-    log(f"â–¶  Processing table: [{table_name}]")
+    log(f"{''*60}")
+    log(f"  Processing table: [{table_name}]")
     log(f"   Source : {csv_path}")
     log(f"   PK     : {pk}  |  Date col: {date_col}")
 
-    # â”€â”€ 1. Read â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  1. Read 
     df = read_bronze_csv(csv_path)
     raw_count = df.count()
     log(f"   Bronze row count  : {raw_count:,}")
 
-    # â”€â”€ 2. Replace empty strings with null â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  2. Replace empty strings with null 
     df = replace_empty_with_null(df)
 
-    # â”€â”€ 3. Title-case cosmetic columns â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  3. Title-case cosmetic columns 
     df = apply_title_case(df, TITLE_CASE_COLUMNS.get(table_name, []))
 
-    # â”€â”€ 4. Cast to correct data types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  4. Cast to correct data types 
     df = cast_column_types(df, COLUMN_TYPES.get(table_name, {}))
 
-    # â”€â”€ 5. Parse date columns â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  5. Parse date columns 
     df = parse_date_columns(df, DATE_COLUMNS.get(table_name, []))
 
-    # â”€â”€ 6. Phone & zip cleaning â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  6. Phone & zip cleaning 
     df = clean_phone(df)
     df = clean_zip_code(df)
 
-    # â”€â”€ 7. Numeric bounds enforcement â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  7. Numeric bounds enforcement 
     df = apply_numeric_bounds(df, NUMERIC_BOUNDS.get(table_name, {}))
 
-    # â”€â”€ 8. Deduplication â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  8. Deduplication 
     df = deduplicate(df, pk, date_col)
     dedup_count = df.count()
     log(f"   Silver row count  : {dedup_count:,}  "
         f"(removed {raw_count - dedup_count:,} duplicates/invalids)")
 
-    # â”€â”€ 9. Silver metadata columns â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  9. Silver metadata columns 
     df = add_silver_metadata(
         df,
         source_table=table_name,
@@ -407,7 +407,7 @@ def transform_table(table_name: str):
     valid_count = df.filter(F.col("_is_valid") == True).count()
     log(f"   Valid records     : {valid_count:,} / {dedup_count:,}")
 
-    # â”€â”€ 10. Write Silver Delta table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  10. Write Silver Delta table 
     write_silver_table(df, table_name)
 
     return {
@@ -419,14 +419,14 @@ def transform_table(table_name: str):
     }
 
 
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-# ENTRY POINT â€“ Run all tables
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
+# ENTRY POINT  Run all tables
+# 
 
 def run_bronze_to_silver():
-    """Orchestrate the full Bronze â†’ Silver load."""
+    """Orchestrate the full Bronze to Silver load."""
     log("=" * 60)
-    log("  Fabric Bronze â†’ Silver Transformation  START")
+    log("  Fabric Bronze to Silver Transformation  START")
     log("=" * 60)
 
     # Ensure Silver schema exists
@@ -439,10 +439,10 @@ def run_bronze_to_silver():
             result = transform_table(table_name)
             summary.append(result)
         except Exception as e:
-            log(f"âŒ  ERROR processing [{table_name}]: {e}")
+            log(f"  ERROR processing [{table_name}]: {e}")
             raise
 
-    # â”€â”€ Print Summary Report â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    #  Print Summary Report 
     log("")
     log("=" * 60)
     log("  TRANSFORMATION SUMMARY")
@@ -455,15 +455,15 @@ def run_bronze_to_silver():
             f"{r['silver_rows']:>10,} {r['valid_rows']:>10,} "
             f"{r['removed_rows']:>10,}")
     log("=" * 60)
-    log("  Bronze â†’ Silver Transformation  COMPLETE âœ…")
+    log("  Bronze to Silver Transformation  COMPLETE ")
     log("=" * 60)
 
     return summary
 
 
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 # RUN
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# 
 summary = run_bronze_to_silver()
 
 # METADATA ********************
