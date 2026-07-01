@@ -16,16 +16,13 @@
 # Purpose  : Create the FSI-Fabric-Medallion-Architecture-Insurance-Demo Fabric workspace and
 #            deploy the source-controlled Fabric items into it.
 #
-# Recommended path:
-#   1. Set CAPACITY_ID.
-#   2. Set RUN_GIT_SYNC = True.
-#   3. Configure the Git provider block and GIT_CONNECTION_ID.
-#   4. Run all cells.
-#
-# Fallback path:
-#   Set RUN_REST_ITEM_DEPLOYMENT = True and SOURCE_REPO_ZIP_URL
-#   to create/update supported item definitions directly with
-#   Fabric REST item APIs.
+# Recommended no-Git path:
+#   1. Upload this notebook to any Fabric workspace.
+#   2. Set CAPACITY_ID.
+#   3. Keep RUN_REST_ITEM_DEPLOYMENT = True.
+#   4. Set SOURCE_REPO_ZIP_URL, or set SOURCE_MODE = "lakehouse_zip"
+#      and upload the repository zip to SOURCE_ZIP_FILE_PATH.
+#   5. Run all cells.
 # ============================================================
 
 import base64
@@ -55,8 +52,8 @@ TARGET_WORKSPACE_DESCRIPTION = (
 CAPACITY_ID = ""
 DOMAIN_ID = ""
 
-# Preferred deployment path. This creates the workspace, connects it to the
-# repository, initializes Git integration, and updates the workspace from Git.
+# Optional Git deployment path. Leave disabled when using manually imported
+# notebooks without connecting the Fabric workspace to GitHub.
 RUN_GIT_SYNC = False
 GIT_PROVIDER_TYPE = "GitHub"  # "GitHub" or "AzureDevOps"
 GIT_BRANCH_NAME = "main"
@@ -76,11 +73,16 @@ AZURE_DEVOPS_REPOSITORY_NAME = ""
 # Create/configure it in Fabric, then paste the connection object ID here.
 GIT_CONNECTION_ID = ""
 
-# REST fallback. This path creates items directly from the repo files where
-# item definition APIs support the item type. It is useful for bootstrapping,
-# but Git sync is the most complete deployment path for this source tree.
-RUN_REST_ITEM_DEPLOYMENT = False
-SOURCE_REPO_ZIP_URL = ""       # Example: https://github.com/owner/repo/archive/refs/heads/main.zip
+# Recommended no-Git deployment path. This creates/updates items directly
+# from the repository files using Fabric REST item definition APIs.
+RUN_REST_ITEM_DEPLOYMENT = True
+SOURCE_MODE = "github_zip"  # "github_zip" or "lakehouse_zip"
+SOURCE_REPO_ZIP_URL = (
+    "https://github.com/<owner>/FSI-Fabric-Medallion-Architecture-Insurance-Demo/archive/refs/heads/main.zip"
+)
+SOURCE_ZIP_FILE_PATH = (
+    "Files/Reference_Data_Source/FSI-Fabric-Medallion-Architecture-Insurance-Demo-main.zip"
+)
 
 # Optional GitHub token for private SOURCE_REPO_ZIP_URL downloads. Store it in
 # Key Vault and set both values below. Do not paste tokens into this notebook.
@@ -430,6 +432,11 @@ def get_secret_from_key_vault(vault_url: str, secret_name: str) -> str:
 def download_repo_zip() -> Path:
     if not SOURCE_REPO_ZIP_URL:
         raise ValueError("Set SOURCE_REPO_ZIP_URL before running REST item deployment.")
+    if "<owner>" in SOURCE_REPO_ZIP_URL:
+        raise ValueError(
+            "Replace <owner> in SOURCE_REPO_ZIP_URL with the GitHub owner or "
+            "organization for your public repository, or use SOURCE_MODE = 'lakehouse_zip'."
+        )
 
     headers = {}
     if GITHUB_TOKEN_KEY_VAULT_URL and GITHUB_TOKEN_SECRET_NAME:
@@ -439,16 +446,29 @@ def download_repo_zip() -> Path:
         )
         headers["Authorization"] = f"Bearer {token}"
 
-    work_dir = Path("/tmp/ws_insurance_demo_repo")
-    if work_dir.exists():
-        shutil.rmtree(work_dir)
-    work_dir.mkdir(parents=True, exist_ok=True)
-
-    zip_path = work_dir / "repo.zip"
+    zip_path = Path("/tmp/fabric_medallion_insurance_demo_repo_download.zip")
+    if zip_path.exists():
+        zip_path.unlink()
     response = requests.get(SOURCE_REPO_ZIP_URL, headers=headers, timeout=300)
     response.raise_for_status()
     zip_path.write_bytes(response.content)
+    return zip_path
 
+
+def local_file_uri(path: Path) -> str:
+    return "file:" + path.resolve().as_posix()
+
+
+def copy_lakehouse_zip_to_local(work_dir: Path) -> Path:
+    if not SOURCE_ZIP_FILE_PATH:
+        raise ValueError("Set SOURCE_ZIP_FILE_PATH when SOURCE_MODE = 'lakehouse_zip'.")
+
+    zip_path = work_dir / "repo.zip"
+    _get_notebookutils().fs.cp(SOURCE_ZIP_FILE_PATH, local_file_uri(zip_path))
+    return zip_path
+
+
+def extract_repo_zip(zip_path: Path, work_dir: Path) -> Path:
     with zipfile.ZipFile(zip_path) as archive:
         archive.extractall(work_dir)
 
@@ -473,9 +493,21 @@ def repo_root_for_rest_deployment() -> Path:
         print(f"Using local repository root: {local_root}")
         return local_root
 
-    downloaded_root = download_repo_zip()
-    print(f"Using downloaded repository root: {downloaded_root}")
-    return downloaded_root
+    work_dir = Path("/tmp/fabric_medallion_insurance_demo_repo")
+    if work_dir.exists():
+        shutil.rmtree(work_dir)
+    work_dir.mkdir(parents=True, exist_ok=True)
+
+    if SOURCE_MODE == "github_zip":
+        zip_path = download_repo_zip()
+    elif SOURCE_MODE == "lakehouse_zip":
+        zip_path = copy_lakehouse_zip_to_local(work_dir)
+    else:
+        raise ValueError("SOURCE_MODE must be 'github_zip' or 'lakehouse_zip'.")
+
+    repo_root = extract_repo_zip(zip_path, work_dir)
+    print(f"Using repository root: {repo_root}")
+    return repo_root
 
 
 def read_platform(platform_path: Path) -> FabricItemSource:
@@ -679,8 +711,8 @@ def deploy_items_from_repo(workspace_id: str) -> None:
 
 if not RUN_GIT_SYNC and not RUN_REST_ITEM_DEPLOYMENT:
     raise ValueError(
-        "Set RUN_GIT_SYNC = True for the recommended Git deployment path, "
-        "or RUN_REST_ITEM_DEPLOYMENT = True for direct REST item deployment."
+        "Set RUN_REST_ITEM_DEPLOYMENT = True for no-Git REST item deployment, "
+        "or RUN_GIT_SYNC = True for Fabric Git deployment."
     )
 
 workspace = create_or_get_workspace()

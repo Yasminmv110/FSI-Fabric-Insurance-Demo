@@ -1,10 +1,10 @@
-﻿# FSI-Fabric-Medallion-Architecture-Insurance-Demo â€” Agent Instructions
+# FSI-Fabric-Medallion-Architecture-Insurance-Demo - Agent Instructions
 
 > See [README.md](README.md) for the full architecture diagram and workspace component catalogue.
 
 ## What This Project Is
 
-A Microsoft Fabric end-to-end insurance demo implementing **Medallion architecture** (Bronze â†’ Silver â†’ Gold) with PySpark notebooks, T-SQL stored procedures, DirectLake semantic models, a Power BI report, and a natural-language Data Agent.
+A Microsoft Fabric end-to-end insurance demo implementing **Medallion architecture** (Bronze to Silver to Gold) with PySpark notebooks, T-SQL stored procedures, DirectLake semantic models, a Power BI report, and a natural-language Data Agent.
 
 ---
 
@@ -16,7 +16,7 @@ A Microsoft Fabric end-to-end insurance demo implementing **Medallion architectu
 | **Silver** | `LH_Insurance.Lakehouse` | `Silver` (capital S) | Delta tables written by notebook |
 | **Gold** | `WH_Insurance.Warehouse` | `gold` (lowercase) | `Fabric Data Stores/WH_Insurance.Warehouse/gold/` |
 
-**Schema casing is intentional and load-bearing** â€” `Silver` â‰  `silver`. All cross-layer SQL references must use the exact casing above.
+**Schema casing is intentional and load-bearing** - `Silver` != `silver`. All cross-layer SQL references must use the exact casing above.
 
 ---
 
@@ -24,15 +24,16 @@ A Microsoft Fabric end-to-end insurance demo implementing **Medallion architectu
 
 | Task | File |
 |------|------|
+| Importable notebooks for manual Fabric upload | [Downloadable_Notebooks/](Downloadable_Notebooks/) |
 | Workspace and item provisioning | [notebook-content.py](Notebooks/provision_fabric_workspace_and_items.Notebook/notebook-content.py) |
 | Reference data upload | [notebook-content.py](Notebooks/upload_reference_data_to_lakehouse.Notebook/notebook-content.py) |
-| Bronze â†’ Silver transform | [notebook-content.py](Notebooks/insurance_bronze_to_silver_notebook.Notebook/notebook-content.py) |
+| Bronze to Silver transform | [notebook-content.py](Notebooks/insurance_bronze_to_silver_notebook.Notebook/notebook-content.py) |
 | Gold KPI table DDL | [gold/Tables/](Fabric%20Data%20Stores/WH_Insurance.Warehouse/gold/Tables/) |
-| Silver â†’ Gold aggregation SP | [usp_Load_Silver_to_Gold.sql](Fabric%20Data%20Stores/WH_Insurance.Warehouse/gold/StoredProcedures/usp_Load_Silver_to_Gold.sql) |
+| Silver to Gold aggregation SP | [usp_Load_Silver_to_Gold.sql](Fabric%20Data%20Stores/WH_Insurance.Warehouse/gold/StoredProcedures/usp_Load_Silver_to_Gold.sql) |
 | Gold schema creation | [gold.sql](Fabric%20Data%20Stores/WH_Insurance.Warehouse/gold/gold.sql) |
 | Pipeline orchestration | [pipeline-content.json](Pipelines/Pl_Insurance_Medallion.DataPipeline/pipeline-content.json) |
-| SM Gold â€” model / tables / relationships | [SM_Gold definition/](Semantic%20Models%20and%20PBI%20Reports/SM_Gold_InsuranceDemo.SemanticModel/definition/) |
-| SM Silver â€” model / tables | [SM_Silver definition/](Semantic%20Models%20and%20PBI%20Reports/SM_Silver_InsuranceDemo.SemanticModel/definition/) |
+| SM Gold - model / tables / relationships | [SM_Gold definition/](Semantic%20Models%20and%20PBI%20Reports/SM_Gold_InsuranceDemo.SemanticModel/definition/) |
+| SM Silver - model / tables | [SM_Silver definition/](Semantic%20Models%20and%20PBI%20Reports/SM_Silver_InsuranceDemo.SemanticModel/definition/) |
 | Snowflake mirror config | [mirroring.json](Mirrored%20Databases/INSURANCE.MirroredDatabase/mirroring.json) |
 | Data Agent config | [data_agent.json](Data%20Agent/DA_InsuranceDemo.DataAgent/Files/Config/data_agent.json) |
 
@@ -40,7 +41,7 @@ A Microsoft Fabric end-to-end insurance demo implementing **Medallion architectu
 
 ## Non-Obvious Facts
 
-### Stored procedure â€” Silver source references
+### Stored procedure - Silver source references
 [usp_Load_Silver_to_Gold.sql](Fabric%20Data%20Stores/WH_Insurance.Warehouse/gold/StoredProcedures/usp_Load_Silver_to_Gold.sql) uses dynamic SQL built from two variables declared at the top:
 
 ```sql
@@ -73,14 +74,14 @@ Every **Gold** table has one audit column:
   - full bundle: `Files/Reference_Data/`
   - structured CSV stage: `Files/Bronze_Raw_Data/`
   - unstructured file stage: `Files/Bronze_Unstructured_Data/`
-- Bronze CSVs are read with `inferSchema=false` â€” all columns land as `StringType`.
+- Bronze CSVs are read with `inferSchema=false` - all columns land as `StringType`.
 - Explicit casts are applied afterwards via the `COLUMN_TYPES` config dict.
 - Out-of-bounds numeric values are set to `null` (not clamped), per `NUMERIC_BOUNDS`.
 - Deduplication order: exact-duplicate rows removed first, then PK-level duplicates resolved by keeping the row with the latest `date_col`.
 - Delta tables written with schema evolution enabled (`mergeSchema=true`).
 
 ### Fraud scoring (`gold_fraud_flags`)
-7 independent boolean flags with a composite score (0â€“100):
+7 independent boolean flags with a composite score (0-100):
 
 | Flag column | Points |
 |------------|--------|
@@ -92,10 +93,10 @@ Every **Gold** table has one audit column:
 | `flag_new_policy_claim` (policy < 90 days old) | +10 |
 | `flag_repeat_policyholder` (> 3 claims) | +10 |
 
-Risk label thresholds: `Critical` â‰¥ 75 Â· `High` â‰¥ 50 Â· `Medium` â‰¥ 25 Â· `Low` < 25
+Risk label thresholds: `Critical` >= 75; `High` >= 50; `Medium` >= 25; `Low` < 25
 
-### Semantic models â€” DirectLake
-Both SM_Gold and SM_Silver use **DirectLake** mode. DDL changes to warehouse/lakehouse tables propagate automatically â€” no import refresh needed. Do not hardcode OneLake URLs; they live in `expressions.tmdl` and are workspace-specific.
+### Semantic models - DirectLake
+Both SM_Gold and SM_Silver use **DirectLake** mode. DDL changes to warehouse/lakehouse tables propagate automatically - no import refresh needed. Do not hardcode OneLake URLs; they live in `expressions.tmdl` and are workspace-specific.
 
 SM_Gold surfaces **only the 6 `gold_*` KPI tables**. Older `Dim*` and `Fact*` warehouse tables were removed from the repository and are not expected to exist in deployed workspaces.
 
@@ -106,9 +107,12 @@ Both top-level `definition.json` files are empty (`{}`), but the ontology folder
 
 ### Pipeline dependency
 The pipeline has three sequential activities, each with a **12-hour timeout**:
-1. `Notebook- Upload Reference Data` â€” uploads/stages repository reference data into `LH_Insurance` Files
-2. `Notebook-Bronze_to_Silver` â€” runs the PySpark notebook; only runs if activity 1 succeeds
-3. `SP-Silver to Gold` â€” calls `gold.usp_Load_Silver_to_Gold`; only runs if activity 2 succeeds
+1. `Notebook- Upload Reference Data` - uploads/stages repository reference data into `LH_Insurance` Files
+2. `Notebook-Bronze_to_Silver` - runs the PySpark notebook; only runs if activity 1 succeeds
+3. `SP-Silver to Gold` - calls `gold.usp_Load_Silver_to_Gold`; only runs if activity 2 succeeds
+
+### Manual notebook import
+Users can download the `.ipynb` files in `Downloadable_Notebooks/`, import them into a Fabric workspace, and run them without connecting the workspace to GitHub. Keep those `.ipynb` files in sync when changing the source notebooks under `Notebooks/*.Notebook/`.
 
 ---
 
@@ -142,4 +146,4 @@ The pipeline has three sequential activities, each with a **12-hour timeout**:
 2. Update [`upload_reference_data_to_lakehouse` notebook-content.py](Notebooks/upload_reference_data_to_lakehouse.Notebook/notebook-content.py) if the file should be validated during upload
 3. In [`insurance_bronze_to_silver_notebook` notebook-content.py](Notebooks/insurance_bronze_to_silver_notebook.Notebook/notebook-content.py), add entries to `TABLE_CONFIG`, `NOT_NULL_COLUMNS`, `COLUMN_TYPES`, `DATE_COLUMNS`, `TITLE_CASE_COLUMNS`, and `NUMERIC_BOUNDS` as applicable
 3. Add `ref table <table_name>` to [`SM_Silver model.tmdl`](Semantic%20Models%20and%20PBI%20Reports/SM_Silver_InsuranceDemo.SemanticModel/definition/model.tmdl)
-4. Create [`SM_Silver definition/tables/<table_name>.tmdl`](Semantic%20Models%20and%20PBI%20Reports/SM_Silver_InsuranceDemo.SemanticModel/definition/tables/) â€” include the three `_silver_*` metadata columns
+4. Create [`SM_Silver definition/tables/<table_name>.tmdl`](Semantic%20Models%20and%20PBI%20Reports/SM_Silver_InsuranceDemo.SemanticModel/definition/tables/) - include the three `_silver_*` metadata columns
