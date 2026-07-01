@@ -1,0 +1,12 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata":  {
+                     "type":  "Notebook",
+                     "displayName":  "provision_fabric_workspace_and_items",
+                     "description":  "Creates the FSI-Fabric-Medallion-Architecture-Insurance-Demo Fabric workspace and deploys the workspace items."
+                 },
+    "config":  {
+                   "version":  "2.0",
+                   "logicalId":  "8e4d27aa-6609-44c3-b53d-854109f35b59"
+               }
+}

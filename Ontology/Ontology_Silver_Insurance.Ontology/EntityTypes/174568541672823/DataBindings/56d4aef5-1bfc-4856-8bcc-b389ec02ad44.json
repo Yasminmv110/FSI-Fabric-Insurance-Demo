@@ -1,0 +1,76 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "56d4aef5-1bfc-4856-8bcc-b389ec02ad44",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "policy_id",
+                                                                  "targetPropertyId":  "3996335022834426969"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "asset_id",
+                                                                  "targetPropertyId":  "3996334950768961713"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "coverage_amount",
+                                                                  "targetPropertyId":  "3996334904480164208"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "deductible",
+                                                                  "targetPropertyId":  "3996334886120027199"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "effective_date",
+                                                                  "targetPropertyId":  "3996334839097898736"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "expiration_date",
+                                                                  "targetPropertyId":  "3996334817163542683"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_is_valid",
+                                                                  "targetPropertyId":  "3996334699246581098"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policy_number",
+                                                                  "targetPropertyId":  "3996334994592549689"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policy_type",
+                                                                  "targetPropertyId":  "3996334929028749130"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policyholder_id",
+                                                                  "targetPropertyId":  "3996334975722651577"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "premium_annual",
+                                                                  "targetPropertyId":  "3996334860851791305"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_silver_processed_ts",
+                                                                  "targetPropertyId":  "3996334742019001047"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_source",
+                                                                  "targetPropertyId":  "3996334721860935850"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "status",
+                                                                  "targetPropertyId":  "3996334790667918694"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "underwriter",
+                                                                  "targetPropertyId":  "3996334768733194888"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "policies",
+                                                                   "sourceSchema":  "Silver"
+                                                               }
+                                 }
+}

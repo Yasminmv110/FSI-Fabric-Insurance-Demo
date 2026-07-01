@@ -1,0 +1,72 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "54ef57cd-f024-468a-ac1b-e287a2e70e60",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "adjuster_id",
+                                                                  "targetPropertyId":  "8091758229834915866"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "adjuster_full_name",
+                                                                  "targetPropertyId":  "8091758203985745290"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "home_office_id",
+                                                                  "targetPropertyId":  "8091758177409674155"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_claims_assigned",
+                                                                  "targetPropertyId":  "8091758150415204253"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "open_claims",
+                                                                  "targetPropertyId":  "8091758123665788265"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "closed_claims",
+                                                                  "targetPropertyId":  "8091758103767192190"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "pending_claims",
+                                                                  "targetPropertyId":  "8091758077035642865"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_estimated_loss",
+                                                                  "targetPropertyId":  "8091758056703767233"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_approved_amount",
+                                                                  "targetPropertyId":  "8091758028396454040"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_approved_amount",
+                                                                  "targetPropertyId":  "8091758007291483080"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "approval_rate_pct",
+                                                                  "targetPropertyId":  "8091757987414614857"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "high_priority_claims",
+                                                                  "targetPropertyId":  "8091757967805593492"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_days_to_file",
+                                                                  "targetPropertyId":  "8091757938744810077"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_gold_processed_ts",
+                                                                  "targetPropertyId":  "8091757917412378280"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "gold_claims_by_adjuster",
+                                                                   "sourceSchema":  "gold"
+                                                               }
+                                 }
+}

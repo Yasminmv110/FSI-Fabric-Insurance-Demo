@@ -1,0 +1,19 @@
+﻿relationship 582b3ba9-b9f2-8521-7418-c3c389a38688
+	fromColumn: gold_fraud_flags.adjuster_id
+	toColumn: gold_adjuster_performance.adjuster_id
+
+relationship 07900e3e-8d5b-8211-47db-572d940d5c9f
+	fromColumn: gold_fraud_flags.policyholder_id
+	toColumn: gold_policyholder_risk_profile.policyholder_id
+
+relationship ae46a6a2-8dd2-a264-8a00-e21a76ac6992
+	fromColumn: gold_claims_by_adjuster.closed_claims
+	toColumn: gold_claims_summary_by_office.closed_claims
+
+relationship e76f03ee-f524-a449-4640-be91ad2923b8
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: gold_adjuster_performance.adjuster_id
+	toColumn: gold_claims_by_adjuster.adjuster_id
+

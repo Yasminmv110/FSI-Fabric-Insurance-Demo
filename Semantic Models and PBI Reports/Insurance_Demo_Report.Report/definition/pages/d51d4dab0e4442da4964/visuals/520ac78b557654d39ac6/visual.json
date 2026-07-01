@@ -1,0 +1,137 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+    "name":  "520ac78b557654d39ac6",
+    "position":  {
+                     "x":  10,
+                     "y":  0,
+                     "z":  0,
+                     "height":  280,
+                     "width":  280,
+                     "tabOrder":  0
+                 },
+    "visual":  {
+                   "visualType":  "clusteredBarChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "adjusters"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "license_state"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "adjusters.license_state",
+                                                                                             "nativeQueryRef":  "license_state",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "adjusters"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "max_active_claims"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  0
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "Sum(adjusters.max_active_claims)",
+                                                                                      "nativeQueryRef":  "Sum of max_active_claims"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Aggregation":  {
+                                                                                                           "Expression":  {
+                                                                                                                              "Column":  {
+                                                                                                                                             "Expression":  {
+                                                                                                                                                                "SourceRef":  {
+                                                                                                                                                                                  "Entity":  "adjusters"
+                                                                                                                                                                              }
+                                                                                                                                                            },
+                                                                                                                                             "Property":  "max_active_claims"
+                                                                                                                                         }
+                                                                                                                          },
+                                                                                                           "Function":  0
+                                                                                                       }
+                                                                                   },
+                                                                         "direction":  "Descending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Adjusters State\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "c061a3758bdd13d844e6",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "adjusters"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "max_active_claims"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  0
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "df9037a7efd7be63604a",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "adjusters"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "license_state"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         }
+                                     ]
+                     }
+}

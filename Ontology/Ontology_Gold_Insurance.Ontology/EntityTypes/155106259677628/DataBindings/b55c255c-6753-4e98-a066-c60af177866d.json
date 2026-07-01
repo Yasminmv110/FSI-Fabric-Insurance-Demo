@@ -1,0 +1,80 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "b55c255c-6753-4e98-a066-c60af177866d",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "claim_id",
+                                                                  "targetPropertyId":  "8091757588337134901"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "claim_number",
+                                                                  "targetPropertyId":  "8091757567128293152"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policyholder_id",
+                                                                  "targetPropertyId":  "8091757546399900191"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "adjuster_id",
+                                                                  "targetPropertyId":  "8091757522513106736"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "asset_id",
+                                                                  "targetPropertyId":  "8091757504114289139"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policy_id",
+                                                                  "targetPropertyId":  "8091757478799367748"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "fraud_score",
+                                                                  "targetPropertyId":  "8091757458774884148"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "fraud_risk_label",
+                                                                  "targetPropertyId":  "8091757438966016646"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "flag_high_loss_vs_coverage",
+                                                                  "targetPropertyId":  "8091757415866054384"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "flag_filed_before_incident",
+                                                                  "targetPropertyId":  "8091757393895315329"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "flag_multiple_claims_same_asset",
+                                                                  "targetPropertyId":  "8091757374999006242"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "flag_low_approval_ratio",
+                                                                  "targetPropertyId":  "8091757351450973739"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "flag_adjuster_high_volume",
+                                                                  "targetPropertyId":  "8091757327848128439"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "flag_new_policy_claim",
+                                                                  "targetPropertyId":  "8091757305711579076"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "flag_repeat_policyholder",
+                                                                  "targetPropertyId":  "8091757284908742339"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_gold_processed_ts",
+                                                                  "targetPropertyId":  "8091757256651016131"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "gold_fraud_flags",
+                                                                   "sourceSchema":  "gold"
+                                                               }
+                                 }
+}

@@ -1,0 +1,163 @@
+﻿table offices
+	lineageTag: 5a6a1f29-3650-43c4-b8bf-df84aa14b577
+	sourceLineageTag: [Silver].[offices]
+
+	column office_id
+		dataType: string
+		lineageTag: f529e962-fc11-4ba6-96f6-7d87e6733858
+		sourceLineageTag: office_id
+		summarizeBy: none
+		sourceColumn: office_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: b05b5fd1-fa5a-451e-a8a9-a0920dbc544d
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column office_type
+		dataType: string
+		lineageTag: aacefac3-0d55-4b0b-9037-bedf881c332c
+		sourceLineageTag: office_type
+		summarizeBy: none
+		sourceColumn: office_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column address
+		dataType: string
+		lineageTag: a0a93a4e-68b5-4cdc-9c1f-fd8f1560e653
+		sourceLineageTag: address
+		summarizeBy: none
+		sourceColumn: address
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: fd9caded-9446-4dbe-94bb-6e271122bb54
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: 6b76d706-685f-4b4b-9894-53b03271c1c7
+		sourceLineageTag: state
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column zip_code
+		dataType: string
+		lineageTag: 052f1d30-a73a-4d04-8e97-080accbde702
+		sourceLineageTag: zip_code
+		summarizeBy: none
+		sourceColumn: zip_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: 632fa5f8-6335-4bb5-bf36-4e7ffce0ff4f
+		sourceLineageTag: latitude
+		summarizeBy: sum
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: d5454439-12e8-4314-b33d-468fff6867c8
+		sourceLineageTag: longitude
+		summarizeBy: sum
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column timezone
+		dataType: string
+		lineageTag: 88ac10f1-daac-499d-9a17-01a1e3d10229
+		sourceLineageTag: timezone
+		summarizeBy: none
+		sourceColumn: timezone
+
+		annotation SummarizationSetBy = Automatic
+
+	column phone
+		dataType: string
+		lineageTag: 111c6bbb-15be-4e12-afaf-9d5e8b1ac9cf
+		sourceLineageTag: phone
+		summarizeBy: none
+		sourceColumn: phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column adjuster_capacity
+		dataType: int64
+		formatString: 0
+		lineageTag: ab0c1094-89b1-45e0-94db-1895b7b34ffd
+		sourceLineageTag: adjuster_capacity
+		summarizeBy: sum
+		sourceColumn: adjuster_capacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_siu_unit
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f34fbe3f-6a11-43df-985c-75041691055f
+		sourceLineageTag: has_siu_unit
+		summarizeBy: none
+		sourceColumn: has_siu_unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column _silver_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 70c964a0-c0f3-45a7-8b27-917fed8b6659
+		sourceLineageTag: _silver_processed_ts
+		summarizeBy: none
+		sourceColumn: _silver_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column _source
+		dataType: string
+		lineageTag: 4ba34bc1-58b6-4e37-8e5c-4f1786b59f83
+		sourceLineageTag: _source
+		summarizeBy: none
+		sourceColumn: _source
+
+		annotation SummarizationSetBy = Automatic
+
+	column _is_valid
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c6c27d0c-d8f2-4d77-88cc-64ba93ab711f
+		sourceLineageTag: _is_valid
+		summarizeBy: none
+		sourceColumn: _is_valid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition offices = entity
+		mode: directLake
+		source
+			entityName: offices
+			schemaName: Silver
+			expressionSource: 'DirectLake - LH_Insurance'
+

@@ -1,0 +1,12 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata":  {
+                     "type":  "Notebook",
+                     "displayName":  "insurance_bronze_to_silver_notebook",
+                     "description":  "New notebook"
+                 },
+    "config":  {
+                   "version":  "2.0",
+                   "logicalId":  "0fb2cde7-4e74-4684-a131-54ba772f3094"
+               }
+}

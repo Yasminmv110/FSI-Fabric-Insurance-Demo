@@ -1,0 +1,23 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+    "id":  "0dff4766-3da5-4024-ab48-208da51eb9d8",
+    "dataBindingTable":  {
+                             "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                             "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                             "sourceTableName":  "gold_adjuster_performance",
+                             "sourceSchema":  "gold",
+                             "sourceType":  "LakehouseTable"
+                         },
+    "sourceKeyRefBindings":  [
+                                 {
+                                     "sourceColumnName":  "adjuster_id",
+                                     "targetPropertyId":  "8091756892559820513"
+                                 }
+                             ],
+    "targetKeyRefBindings":  [
+                                 {
+                                     "sourceColumnName":  "adjuster_id",
+                                     "targetPropertyId":  "8091758229834915866"
+                                 }
+                             ]
+}

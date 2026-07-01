@@ -1,0 +1,80 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "ab2a85d8-0a65-4db3-b9d6-3e0f66fd11ad",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "office_id",
+                                                                  "targetPropertyId":  "3996335413943354263"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "address",
+                                                                  "targetPropertyId":  "3996335344294052458"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "adjuster_capacity",
+                                                                  "targetPropertyId":  "3996335161266296529"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "city",
+                                                                  "targetPropertyId":  "3996335322863304842"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "has_siu_unit",
+                                                                  "targetPropertyId":  "3996335134996837174"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_is_valid",
+                                                                  "targetPropertyId":  "3996335066654889097"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "latitude",
+                                                                  "targetPropertyId":  "3996335256275746133"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "longitude",
+                                                                  "targetPropertyId":  "3996335233268312581"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "name",
+                                                                  "targetPropertyId":  "3996335390798215620"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "office_type",
+                                                                  "targetPropertyId":  "3996335367479017069"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "phone",
+                                                                  "targetPropertyId":  "3996335180655339072"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_silver_processed_ts",
+                                                                  "targetPropertyId":  "3996335114133905687"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_source",
+                                                                  "targetPropertyId":  "3996335089955032647"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "state",
+                                                                  "targetPropertyId":  "3996335302526085342"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "timezone",
+                                                                  "targetPropertyId":  "3996335204733503316"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "zip_code",
+                                                                  "targetPropertyId":  "3996335273707510042"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "offices",
+                                                                   "sourceSchema":  "Silver"
+                                                               }
+                                 }
+}

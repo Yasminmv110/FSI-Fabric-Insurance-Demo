@@ -1,0 +1,12 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata":  {
+                     "type":  "Notebook",
+                     "displayName":  "upload_reference_data_to_lakehouse",
+                     "description":  "Uploads Reference_Data into LH_Insurance Files and stages Bronze source files."
+                 },
+    "config":  {
+                   "version":  "2.0",
+                   "logicalId":  "9c9a3893-88ca-487a-af7a-d2ead9188d49"
+               }
+}

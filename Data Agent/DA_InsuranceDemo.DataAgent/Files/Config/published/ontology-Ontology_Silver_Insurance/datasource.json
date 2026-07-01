@@ -1,0 +1,94 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+    "artifactId":  "00000000-0000-0000-0000-000000000000",
+    "workspaceId":  "00000000-0000-0000-0000-000000000000",
+    "dataSourceInstructions":  null,
+    "displayName":  "Ontology_Silver_Insurance",
+    "type":  "ontology",
+    "userDescription":  null,
+    "metadata":  {
+
+                 },
+    "elements":  [
+                     {
+                         "id":  "adjusters",
+                         "is_selected":  true,
+                         "display_name":  "adjusters",
+                         "type":  "ontology.entity",
+                         "description":  "adjuster_id,employee_id,first_name,last_name,email,phone,license_number,license_state,specializations,status,home_office_id,supervisor_email,source",
+                         "children":  [
+
+                                      ]
+                     },
+                     {
+                         "id":  "asset_inspections",
+                         "is_selected":  true,
+                         "display_name":  "asset_inspections",
+                         "type":  "ontology.entity",
+                         "description":  "asset_id,appraised_value,completed_date,condition_rating,inspection_id,inspection_type,inspector_notes,is_valid,office_id,scheduled_date,silver_processed_ts,source,status",
+                         "children":  [
+
+                                      ]
+                     },
+                     {
+                         "id":  "insured_assets",
+                         "is_selected":  true,
+                         "display_name":  "insured_assets",
+                         "type":  "ontology.entity",
+                         "description":  "asset_id,address,asset_description,asset_number,asset_type,city,condition,estimated_value,is_valid,last_inspection_date,make,model,silver_processed_ts,source,state,vin,year",
+                         "children":  [
+
+                                      ]
+                     },
+                     {
+                         "id":  "offices",
+                         "is_selected":  true,
+                         "display_name":  "offices",
+                         "type":  "ontology.entity",
+                         "description":  "office_id,address,adjuster_capacity,city,has_siu_unit,is_valid,latitude,longitude,name,office_type,phone,silver_processed_ts,source,state,timezone,zip_code",
+                         "children":  [
+
+                                      ]
+                     },
+                     {
+                         "id":  "policies",
+                         "is_selected":  true,
+                         "display_name":  "policies",
+                         "type":  "ontology.entity",
+                         "description":  "policy_id,asset_id,coverage_amount,deductible,effective_date,expiration_date,is_valid,policy_number,policy_type,policyholder_id,premium_annual,silver_processed_ts,source,status,underwriter",
+                         "children":  [
+
+                                      ]
+                     },
+                     {
+                         "id":  "policyholders",
+                         "is_selected":  true,
+                         "display_name":  "policyholders",
+                         "type":  "ontology.entity",
+                         "description":  "policyholder_id,address,city,date_of_birth,email,full_name,is_valid,phone,policyholder_number,policyholder_type,risk_score,silver_processed_ts,source,state,zip_code",
+                         "children":  [
+
+                                      ]
+                     },
+                     {
+                         "id":  "claim_events",
+                         "is_selected":  true,
+                         "display_name":  "claim_events",
+                         "type":  "ontology.entity",
+                         "description":  "claim_event_id,adjuster_id,claim_id,completed_at,cost_usd,created_at,description,event_number,event_type,is_valid,notes,silver_processed_ts,source,status",
+                         "children":  [
+
+                                      ]
+                     },
+                     {
+                         "id":  "claims",
+                         "is_selected":  true,
+                         "display_name":  "claims",
+                         "type":  "ontology.entity",
+                         "description":  "claim_id,adjuster_id,approved_amount,asset_id,claim_number,claim_type,description,estimated_loss,filed_date,incident_date,incident_latitude,incident_longitude,is_valid,office_id,policy_id,policyholder_id,priority,silver_processed_ts,source,status",
+                         "children":  [
+
+                                      ]
+                     }
+                 ]
+}

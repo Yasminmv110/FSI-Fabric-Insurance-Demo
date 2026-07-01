@@ -1,0 +1,180 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+    "name":  "9318817b3ee9b54819cd",
+    "position":  {
+                     "x":  10,
+                     "y":  290,
+                     "z":  1,
+                     "height":  280,
+                     "width":  280,
+                     "tabOrder":  1
+                 },
+    "visual":  {
+                   "visualType":  "donutChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "asset_inspections"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "condition_rating"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  5
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "CountNonNull(asset_inspections.condition_rating)",
+                                                                                      "nativeQueryRef":  "Count of condition_rating"
+                                                                                  },
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "asset_inspections"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "inspection_type"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  5
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "CountNonNull(asset_inspections.inspection_type)",
+                                                                                      "nativeQueryRef":  "Count of inspection_type"
+                                                                                  },
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "asset_inspections"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "status"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  5
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "CountNonNull(asset_inspections.status)",
+                                                                                      "nativeQueryRef":  "Count of status"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Aggregation":  {
+                                                                                                           "Expression":  {
+                                                                                                                              "Column":  {
+                                                                                                                                             "Expression":  {
+                                                                                                                                                                "SourceRef":  {
+                                                                                                                                                                                  "Entity":  "asset_inspections"
+                                                                                                                                                                              }
+                                                                                                                                                            },
+                                                                                                                                             "Property":  "condition_rating"
+                                                                                                                                         }
+                                                                                                                          },
+                                                                                                           "Function":  5
+                                                                                                       }
+                                                                                   },
+                                                                         "direction":  "Descending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Asset Inspections\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "e33be06780e0763c4364",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "asset_inspections"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "inspection_type"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  5
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "5cd6cf6d9e0520659a0a",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "asset_inspections"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "condition_rating"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  5
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "a2e70dac071aaf0eef8d",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "asset_inspections"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "status"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  5
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         }
+                                     ]
+                     }
+}

@@ -1,0 +1,11 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata":  {
+                     "type":  "DataPipeline",
+                     "displayName":  "Pl_Insurance_Medallion"
+                 },
+    "config":  {
+                   "version":  "2.0",
+                   "logicalId":  "d8c0ff10-3d69-4c67-9552-bbbdfde0b613"
+               }
+}

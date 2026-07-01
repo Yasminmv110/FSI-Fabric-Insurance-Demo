@@ -1,0 +1,68 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "359d71fa-c6ec-4c0c-958e-5c0015fec5b9",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "asset_id",
+                                                                  "targetPropertyId":  "3996336137699571405"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "appraised_value",
+                                                                  "targetPropertyId":  "3996336002903047330"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "completed_date",
+                                                                  "targetPropertyId":  "3996336020910187739"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "condition_rating",
+                                                                  "targetPropertyId":  "3996335954435894748"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "inspection_id",
+                                                                  "targetPropertyId":  "3996336163080923625"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "inspection_type",
+                                                                  "targetPropertyId":  "3996336089702667922"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "inspector_notes",
+                                                                  "targetPropertyId":  "3996335978152982159"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_is_valid",
+                                                                  "targetPropertyId":  "3996335888592074787"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "office_id",
+                                                                  "targetPropertyId":  "3996336118610081324"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "scheduled_date",
+                                                                  "targetPropertyId":  "3996336048960973928"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_silver_processed_ts",
+                                                                  "targetPropertyId":  "3996335934564754384"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_source",
+                                                                  "targetPropertyId":  "3996335912249860673"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "status",
+                                                                  "targetPropertyId":  "3996336071752263645"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "asset_inspections",
+                                                                   "sourceSchema":  "Silver"
+                                                               }
+                                 }
+}

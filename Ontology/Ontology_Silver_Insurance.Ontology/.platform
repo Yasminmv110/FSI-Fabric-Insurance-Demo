@@ -1,0 +1,11 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata":  {
+                     "type":  "Ontology",
+                     "displayName":  "Ontology_Silver_Insurance"
+                 },
+    "config":  {
+                   "version":  "2.0",
+                   "logicalId":  "7cacc51f-6491-4c9e-a078-6d82c8ea03d5"
+               }
+}

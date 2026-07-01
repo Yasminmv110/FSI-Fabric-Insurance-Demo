@@ -1,0 +1,155 @@
+﻿table gold_claims_by_adjuster
+	lineageTag: 91594b8c-309b-41ba-a5b7-525652949a13
+	sourceLineageTag: [gold].[gold_claims_by_adjuster]
+
+	column adjuster_id
+		dataType: string
+		lineageTag: c559efca-43ae-481c-96d7-d44faa077712
+		sourceLineageTag: adjuster_id
+		summarizeBy: none
+		sourceColumn: adjuster_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column adjuster_full_name
+		dataType: string
+		lineageTag: 47162f48-af76-4019-8437-730fc5e2060d
+		sourceLineageTag: adjuster_full_name
+		summarizeBy: none
+		sourceColumn: adjuster_full_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_office_id
+		dataType: string
+		lineageTag: 3c3fdf51-4116-4ed8-b9d4-f300bd3a6773
+		sourceLineageTag: home_office_id
+		summarizeBy: none
+		sourceColumn: home_office_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_claims_assigned
+		dataType: int64
+		formatString: 0
+		lineageTag: fde416d8-8afe-4fb6-afff-214dea19da45
+		sourceLineageTag: total_claims_assigned
+		summarizeBy: sum
+		sourceColumn: total_claims_assigned
+
+		annotation SummarizationSetBy = Automatic
+
+	column open_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f6f6b62-bbd5-487c-a494-ccfb290594d6
+		sourceLineageTag: open_claims
+		summarizeBy: sum
+		sourceColumn: open_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column closed_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: 68719b22-7dba-4766-8ead-c21df51f54aa
+		sourceLineageTag: closed_claims
+		summarizeBy: none
+		sourceColumn: closed_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column pending_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: 12218933-e291-4e3e-a670-8124655a2e0f
+		sourceLineageTag: pending_claims
+		summarizeBy: sum
+		sourceColumn: pending_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_estimated_loss
+		dataType: double
+		lineageTag: d7e323d9-8332-4722-adc3-65faedc51d74
+		sourceLineageTag: avg_estimated_loss
+		summarizeBy: sum
+		sourceColumn: avg_estimated_loss
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_approved_amount
+		dataType: double
+		lineageTag: 1af04f92-97a3-4a93-bbe8-5725cd17692e
+		sourceLineageTag: total_approved_amount
+		summarizeBy: sum
+		sourceColumn: total_approved_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_approved_amount
+		dataType: double
+		lineageTag: 227e9ab4-de5d-47f1-bce0-173a03d3ffb1
+		sourceLineageTag: avg_approved_amount
+		summarizeBy: sum
+		sourceColumn: avg_approved_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column approval_rate_pct
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 09291b1e-82ee-4499-a52d-0ff173004c62
+		sourceLineageTag: approval_rate_pct
+		summarizeBy: sum
+		sourceColumn: approval_rate_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column high_priority_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: d745faa8-7401-4408-8bdf-fd3dd1548bf9
+		sourceLineageTag: high_priority_claims
+		summarizeBy: sum
+		sourceColumn: high_priority_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_days_to_file
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d19ef54a-d773-4892-9398-033c456d8e8f
+		sourceLineageTag: avg_days_to_file
+		summarizeBy: sum
+		sourceColumn: avg_days_to_file
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column _gold_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9f073698-024a-448e-9276-a7aa12a3d744
+		sourceLineageTag: _gold_processed_ts
+		summarizeBy: none
+		sourceColumn: _gold_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_claims_by_adjuster = entity
+		mode: directLake
+		source
+			entityName: gold_claims_by_adjuster
+			schemaName: gold
+			expressionSource: 'DirectLake - WH_Insurance'
+

@@ -1,0 +1,60 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "bd64529b-3f4a-49d0-b093-b338127987d0",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "claim_type",
+                                                                  "targetPropertyId":  "8091757859101614097"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_claims",
+                                                                  "targetPropertyId":  "8091757835314387172"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_estimated_loss",
+                                                                  "targetPropertyId":  "8091757812439985651"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "max_estimated_loss",
+                                                                  "targetPropertyId":  "8091757788745560823"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "min_estimated_loss",
+                                                                  "targetPropertyId":  "8091757768049484250"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_approved_amount",
+                                                                  "targetPropertyId":  "8091757746426078310"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_approved_amount",
+                                                                  "targetPropertyId":  "8091757723499940814"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_approval_rate_pct",
+                                                                  "targetPropertyId":  "8091757697654423418"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "most_common_status",
+                                                                  "targetPropertyId":  "8091757676931897047"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_days_to_file",
+                                                                  "targetPropertyId":  "8091757658238797401"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_gold_processed_ts",
+                                                                  "targetPropertyId":  "8091757636346039883"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "gold_avg_loss_by_claim_type",
+                                                                   "sourceSchema":  "gold"
+                                                               }
+                                 }
+}

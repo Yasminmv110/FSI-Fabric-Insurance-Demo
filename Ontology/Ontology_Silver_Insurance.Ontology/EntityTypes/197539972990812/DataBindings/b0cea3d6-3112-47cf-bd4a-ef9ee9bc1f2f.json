@@ -1,0 +1,84 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "b0cea3d6-3112-47cf-bd4a-ef9ee9bc1f2f",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "asset_id",
+                                                                  "targetPropertyId":  "3996335836993647193"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "address",
+                                                                  "targetPropertyId":  "3996335643473616547"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "asset_description",
+                                                                  "targetPropertyId":  "3996335764663235297"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "asset_number",
+                                                                  "targetPropertyId":  "3996335817981842836"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "asset_type",
+                                                                  "targetPropertyId":  "3996335791687023599"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "city",
+                                                                  "targetPropertyId":  "3996335621841867706"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "condition",
+                                                                  "targetPropertyId":  "3996335557020225170"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "estimated_value",
+                                                                  "targetPropertyId":  "3996335575800276488"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_is_valid",
+                                                                  "targetPropertyId":  "3996335462399385556"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "last_inspection_date",
+                                                                  "targetPropertyId":  "3996335529480317360"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "make",
+                                                                  "targetPropertyId":  "3996335745165642626"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "model",
+                                                                  "targetPropertyId":  "3996335723665593501"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_silver_processed_ts",
+                                                                  "targetPropertyId":  "3996335507411089342"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_source",
+                                                                  "targetPropertyId":  "3996335487963983209"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "state",
+                                                                  "targetPropertyId":  "3996335596416486282"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "vin",
+                                                                  "targetPropertyId":  "3996335667637177977"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "year",
+                                                                  "targetPropertyId":  "3996335691777269374"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "insured_assets",
+                                                                   "sourceSchema":  "Silver"
+                                                               }
+                                 }
+}

@@ -1,0 +1,141 @@
+﻿table gold_adjuster_performance
+	lineageTag: b028ff03-6306-4e61-8b4d-e18c4f87567d
+	sourceLineageTag: [gold].[gold_adjuster_performance]
+
+	column adjuster_id
+		dataType: string
+		lineageTag: 9f84a008-e6f7-47e5-887d-15c589e92119
+		sourceLineageTag: adjuster_id
+		summarizeBy: none
+		sourceColumn: adjuster_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column full_name
+		dataType: string
+		lineageTag: 7807266f-14bf-49bb-aa9f-c5d5770d8efd
+		sourceLineageTag: full_name
+		summarizeBy: none
+		sourceColumn: full_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column license_state
+		dataType: string
+		lineageTag: ec3499a4-e218-4365-afa9-58f4927145df
+		sourceLineageTag: license_state
+		summarizeBy: none
+		sourceColumn: license_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column specializations
+		dataType: string
+		lineageTag: 7c35f172-ca24-4217-917b-cd2c6e70e90e
+		sourceLineageTag: specializations
+		summarizeBy: none
+		sourceColumn: specializations
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: f6e67f9d-4a47-4f32-a6ce-a55fe5a80160
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_active_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: 6588ab28-c281-4b8c-9672-91b6cd09383d
+		sourceLineageTag: max_active_claims
+		summarizeBy: none
+		sourceColumn: max_active_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_claims_handled
+		dataType: int64
+		formatString: 0
+		lineageTag: 4312d2c6-5af0-4833-8974-a48303a291d2
+		sourceLineageTag: total_claims_handled
+		summarizeBy: none
+		sourceColumn: total_claims_handled
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_claim_events
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ab1359e-41f5-4dc1-b0a2-188843e40dad
+		sourceLineageTag: total_claim_events
+		summarizeBy: none
+		sourceColumn: total_claim_events
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_cost_per_event
+		dataType: double
+		lineageTag: 6ba09df5-4b54-4a87-be9c-d31d2604e308
+		sourceLineageTag: avg_cost_per_event
+		summarizeBy: none
+		sourceColumn: avg_cost_per_event
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_days_event_completion
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 0134f50c-f844-4490-a938-6f2962e3b7fc
+		sourceLineageTag: avg_days_event_completion
+		summarizeBy: none
+		sourceColumn: avg_days_event_completion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column utilization_rate_pct
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 7ac11d79-2ad2-4aed-953e-7b438187d6d6
+		sourceLineageTag: utilization_rate_pct
+		summarizeBy: none
+		sourceColumn: utilization_rate_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column high_fraud_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b3fc6d3-21bf-4938-aa4b-95760414bced
+		sourceLineageTag: high_fraud_claims
+		summarizeBy: none
+		sourceColumn: high_fraud_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column _gold_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 57bdaf81-b055-4b12-a7d6-1b8fd142e86e
+		sourceLineageTag: _gold_processed_ts
+		summarizeBy: none
+		sourceColumn: _gold_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_adjuster_performance = entity
+		mode: directLake
+		source
+			entityName: gold_adjuster_performance
+			schemaName: gold
+			expressionSource: 'DirectLake - WH_Insurance'
+

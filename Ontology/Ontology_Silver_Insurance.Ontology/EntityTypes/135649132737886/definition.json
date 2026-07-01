@@ -1,0 +1,161 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+    "id":  "135649132737886",
+    "namespace":  "usertypes",
+    "baseEntityTypeId":  null,
+    "name":  "claims",
+    "entityIdParts":  [
+                          "3996333941159564889"
+                      ],
+    "displayNamePropertyId":  null,
+    "namespaceType":  "Imported",
+    "visibility":  "Visible",
+    "properties":  [
+                       {
+                           "id":  "3996333941159564889",
+                           "name":  "claim_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333913586798226",
+                           "name":  "claim_number",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333879956029219",
+                           "name":  "policy_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333853602818202",
+                           "name":  "policyholder_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333829385543054",
+                           "name":  "asset_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333808597801716",
+                           "name":  "adjuster_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333781971460697",
+                           "name":  "office_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333759584906551",
+                           "name":  "claim_type",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333732678167559",
+                           "name":  "description",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333714357845506",
+                           "name":  "incident_date",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996333692481717928",
+                           "name":  "filed_date",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996333666482499096",
+                           "name":  "status",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333642768280368",
+                           "name":  "estimated_loss",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996333618240520261",
+                           "name":  "approved_amount",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996333598144091627",
+                           "name":  "priority",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333574333260410",
+                           "name":  "incident_latitude",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996333549246519978",
+                           "name":  "incident_longitude",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996333526198066685",
+                           "name":  "silver_processed_ts",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996333507004573674",
+                           "name":  "source",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996333480073137441",
+                           "name":  "is_valid",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       }
+                   ],
+    "timeseriesProperties":  [
+
+                             ],
+    "untypedProperties":  [
+
+                          ]
+}

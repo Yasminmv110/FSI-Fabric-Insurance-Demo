@@ -1,0 +1,23 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+    "id":  "630ecc6e-b0cb-4750-afce-54f9a1517991",
+    "dataBindingTable":  {
+                             "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                             "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                             "sourceTableName":  "gold_claims_by_adjuster",
+                             "sourceSchema":  "gold",
+                             "sourceType":  "LakehouseTable"
+                         },
+    "sourceKeyRefBindings":  [
+                                 {
+                                     "sourceColumnName":  "adjuster_id",
+                                     "targetPropertyId":  "8091758229834915866"
+                                 }
+                             ],
+    "targetKeyRefBindings":  [
+                                 {
+                                     "sourceColumnName":  "closed_claims",
+                                     "targetPropertyId":  "8091757072857030286"
+                                 }
+                             ]
+}

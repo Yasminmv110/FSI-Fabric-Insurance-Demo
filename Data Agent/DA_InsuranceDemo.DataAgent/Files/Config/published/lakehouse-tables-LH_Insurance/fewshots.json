@@ -1,0 +1,25 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/fewShots/1.0.0/schema.json",
+    "fewShots":  [
+                     {
+                         "id":  "58b7bd28-a69c-4d34-b475-aeafea94d441",
+                         "question":  "Which adjusters have the most  claims right now?",
+                         "query":  "-- Step 1: Join [Silver].[claims] with [Silver].[adjusters] to get adjuster details for each claim.\r\n-- Step 2: Filter claims where [status] = \u0027open\u0027.\r\n-- Step 3: Group by adjuster_id and relevant adjuster details.\r\n-- Step 4: Count the number of open claims per adjuster.\r\n-- Step 5: Order the results by the count of open claims in descending order to show adjusters with the most open claims at the top.\r\n\r\nSELECT\r\n    a.[adjuster_id],\r\n    a.[first_name],\r\n    a.[last_name],\r\n    a.[email],\r\n    a.[phone],\r\n    COUNT(c.[claim_id]) AS [OpenClaimCount]\r\nFROM [Silver].[claims] c\r\nINNER JOIN [Silver].[adjusters] a\r\n    ON c.[adjuster_id] = a.[adjuster_id]\r\nGROUP BY\r\n    a.[adjuster_id],\r\n    a.[first_name],\r\n    a.[last_name],\r\n    a.[email],\r\n    a.[phone]\r\nORDER BY [OpenClaimCount] DESC;"
+                     },
+                     {
+                         "id":  "1aa749bf-e07c-48a1-b4f8-7d7d417b636c",
+                         "question":  "How many policyholders are registered at each office?",
+                         "query":  "-- Step 1: Join [Silver].[policyholders] with [Silver].[offices] via the office_id.\r\n-- However, [Silver].[policyholders] does not have an office_id column.\r\n-- Step 2: Check if there is a relationship between policyholders and offices via another table.\r\n-- [Silver].[policyholders] links to [Silver].[claims] via policyholder_id.\r\n-- [Silver].[claims] has office_id.\r\n-- Step 3: For each policyholder, find the distinct office_ids from their claims.\r\n-- Step 4: Count the number of unique policyholders per office_id.\r\n-- Step 5: Group by office_id and return the count.\r\n\r\nSELECT\r\n    [c].[office_id],\r\n    COUNT(DISTINCT [p].[policyholder_id]) AS [policyholder_count]\r\nFROM\r\n    [Silver].[policyholders] AS [p]\r\nINNER JOIN\r\n    [Silver].[claims] AS [c]\r\n    ON [p].[policyholder_id] = [c].[policyholder_id]\r\nGROUP BY\r\n    [c].[office_id];"
+                     },
+                     {
+                         "id":  "497a8891-b484-4f59-b39d-31976cbd3248",
+                         "question":  "Which claim types have the highest average loss amount?",
+                         "query":  "-- Step 1: Group claims by claim_type and calculate the average estimated_loss for each type.\r\n-- Step 2: Order the results by average estimated_loss in descending order to find claim types with the highest average loss.\r\n\r\nSELECT\r\n    [claim_type],\r\n    AVG([estimated_loss]) AS [average_estimated_loss]\r\nFROM\r\n    [Silver].[claims]\r\nGROUP BY\r\n    [claim_type]\r\nORDER BY\r\n    [average_estimated_loss] DESC;"
+                     },
+                     {
+                         "id":  "47776022-1496-4269-a9fe-ebf587c36ae9",
+                         "question":  "Which offices processed the highest number of claims last month?",
+                         "query":  "-- Step 1: Determine the first and last date of the previous month using DATEFROMPARTS and GETDATE.\r\n-- Step 2: Filter claims in [Silver].[claims] where [filed_date] is within the previous month.\r\n-- Step 3: Group the filtered claims by [office_id].\r\n-- Step 4: Count the number of claims per office.\r\n-- Step 5: Order the results by the claim count in descending order.\r\n\r\nSELECT\r\n    [office_id],\r\n    COUNT(*) AS [ClaimCount]\r\nFROM\r\n    [Silver].[claims]\r\nWHERE\r\n    [filed_date] \u003e= DATEFROMPARTS(\r\n        YEAR(DATEADD(MONTH, -1, GETDATE())),\r\n        MONTH(DATEADD(MONTH, -1, GETDATE())),\r\n        1\r\n    )\r\n    AND [filed_date] \u003c DATEFROMPARTS(\r\n        YEAR(GETDATE()),\r\n        MONTH(GETDATE()),\r\n        1\r\n    )\r\nGROUP BY\r\n    [office_id]\r\nORDER BY\r\n    [ClaimCount] DESC;"
+                     }
+                 ]
+}

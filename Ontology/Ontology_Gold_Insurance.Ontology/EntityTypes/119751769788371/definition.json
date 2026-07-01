@@ -1,0 +1,112 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+    "id":  "119751769788371",
+    "namespace":  "usertypes",
+    "baseEntityTypeId":  null,
+    "name":  "gold_adjuster_performance",
+    "entityIdParts":  [
+                          "8091756892559820513"
+                      ],
+    "displayNamePropertyId":  null,
+    "namespaceType":  "Imported",
+    "visibility":  "Visible",
+    "properties":  [
+                       {
+                           "id":  "8091756892559820513",
+                           "name":  "adjuster_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091756870045081757",
+                           "name":  "full_name",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091756851273807627",
+                           "name":  "license_state",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091756828524970931",
+                           "name":  "specializations",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091756807454779811",
+                           "name":  "status",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091756785850951496",
+                           "name":  "max_active_claims",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091756761990633369",
+                           "name":  "total_claims_handled",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091756742926434795",
+                           "name":  "total_claim_events",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091756721514550783",
+                           "name":  "avg_cost_per_event",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091756699615607277",
+                           "name":  "avg_days_event_completion",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091756677461080874",
+                           "name":  "utilization_rate_pct",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091756653914940979",
+                           "name":  "high_fraud_claims",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091756633354340851",
+                           "name":  "gold_processed_ts",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       }
+                   ],
+    "timeseriesProperties":  [
+
+                             ],
+    "untypedProperties":  [
+
+                          ]
+}

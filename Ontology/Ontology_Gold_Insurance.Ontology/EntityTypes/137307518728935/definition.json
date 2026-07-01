@@ -1,0 +1,112 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+    "id":  "137307518728935",
+    "namespace":  "usertypes",
+    "baseEntityTypeId":  null,
+    "name":  "gold_claims_summary_by_office",
+    "entityIdParts":  [
+                          "8091757072857030286"
+                      ],
+    "displayNamePropertyId":  null,
+    "namespaceType":  "Imported",
+    "visibility":  "Visible",
+    "properties":  [
+                       {
+                           "id":  "8091757207788685981",
+                           "name":  "office_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757180222423709",
+                           "name":  "office_name",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757158066044146",
+                           "name":  "city",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757138574912488",
+                           "name":  "state",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757116886533907",
+                           "name":  "total_claims",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091757093030309006",
+                           "name":  "open_claims",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091757072857030286",
+                           "name":  "closed_claims",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091757053155767243",
+                           "name":  "total_estimated_loss",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757027845842787",
+                           "name":  "total_approved_amount",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757002934517185",
+                           "name":  "avg_loss_per_claim",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091756981552049415",
+                           "name":  "fraud_flag_count",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091756962196375619",
+                           "name":  "top_claim_type",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091756940123432889",
+                           "name":  "gold_processed_ts",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       }
+                   ],
+    "timeseriesProperties":  [
+
+                             ],
+    "untypedProperties":  [
+
+                          ]
+}

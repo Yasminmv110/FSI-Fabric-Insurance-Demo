@@ -1,0 +1,37 @@
+﻿{
+    "properties":  {
+                       "source":  {
+                                      "type":  "Snowflake",
+                                      "typeProperties":  {
+                                                             "connection":  "00000000-0000-0000-0000-000000000000",
+                                                             "database":  "INSURANCE",
+                                                             "externalStorages":  [
+                                                                                      {
+                                                                                          "type":  "AzureBlobs",
+                                                                                          "typeProperties":  {
+                                                                                                                 "connection":  "00000000-0000-0000-0000-000000000000"
+                                                                                                             }
+                                                                                      }
+                                                                                  ],
+                                                             "filterRules":  [
+                                                                                 {
+                                                                                     "target":  "objectType",
+                                                                                     "action":  "allow",
+                                                                                     "values":  [
+                                                                                                    "Table",
+                                                                                                    "IcebergTable"
+                                                                                                ]
+                                                                                 }
+                                                                             ]
+                                                         }
+                                  },
+                       "target":  {
+                                      "type":  "MountedRelationalDatabase",
+                                      "typeProperties":  {
+                                                             "defaultSchema":  "dbo",
+                                                             "format":  "Delta",
+                                                             "retentionInDays":  1
+                                                         }
+                                  }
+                   }
+}

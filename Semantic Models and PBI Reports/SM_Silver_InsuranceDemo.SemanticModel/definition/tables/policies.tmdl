@@ -1,0 +1,156 @@
+﻿table policies
+	lineageTag: 4e44bcf6-ca17-4bda-9a94-584528e2a6d2
+	sourceLineageTag: [Silver].[policies]
+
+	column policy_id
+		dataType: string
+		lineageTag: 68d54827-001c-449b-9b92-c7df1e8fc0bd
+		sourceLineageTag: policy_id
+		summarizeBy: none
+		sourceColumn: policy_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column policy_number
+		dataType: string
+		lineageTag: e43119eb-f673-4b63-a07b-1da2522bee0c
+		sourceLineageTag: policy_number
+		summarizeBy: none
+		sourceColumn: policy_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column policyholder_id
+		dataType: string
+		lineageTag: 7e55be9b-beb6-42b8-9309-eb271a4698f9
+		sourceLineageTag: policyholder_id
+		summarizeBy: none
+		sourceColumn: policyholder_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_id
+		dataType: string
+		lineageTag: 2a68565d-8d5b-4304-8051-eea35396a72b
+		sourceLineageTag: asset_id
+		summarizeBy: none
+		sourceColumn: asset_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column policy_type
+		dataType: string
+		lineageTag: 3da1f946-0a8e-4a52-8740-49ff293b17be
+		sourceLineageTag: policy_type
+		summarizeBy: none
+		sourceColumn: policy_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column coverage_amount
+		dataType: double
+		lineageTag: 71977ed7-7ad8-4881-879e-22f955fd263c
+		sourceLineageTag: coverage_amount
+		summarizeBy: sum
+		sourceColumn: coverage_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column deductible
+		dataType: double
+		lineageTag: b4230b7b-e2fc-4a9b-997a-26f4f0525c6e
+		sourceLineageTag: deductible
+		summarizeBy: sum
+		sourceColumn: deductible
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column premium_annual
+		dataType: double
+		lineageTag: fd48ac6a-57c1-4ce5-9eab-91d854709797
+		sourceLineageTag: premium_annual
+		summarizeBy: sum
+		sourceColumn: premium_annual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column effective_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 08da18da-451a-45ea-9bec-18186b851657
+		sourceLineageTag: effective_date
+		summarizeBy: none
+		sourceColumn: effective_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column expiration_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3d090a28-1087-497b-a053-01458c5b72dd
+		sourceLineageTag: expiration_date
+		summarizeBy: none
+		sourceColumn: expiration_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: f85addee-581f-43b4-8b6a-6c2753bd8fca
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column underwriter
+		dataType: string
+		lineageTag: 202bb13d-44e0-40cd-aed3-af0ac2a33b6b
+		sourceLineageTag: underwriter
+		summarizeBy: none
+		sourceColumn: underwriter
+
+		annotation SummarizationSetBy = Automatic
+
+	column _silver_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cb5b4363-b67b-4682-b551-bb81f7829711
+		sourceLineageTag: _silver_processed_ts
+		summarizeBy: none
+		sourceColumn: _silver_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column _source
+		dataType: string
+		lineageTag: b716fa17-b564-4f05-a992-23064f8c5e0c
+		sourceLineageTag: _source
+		summarizeBy: none
+		sourceColumn: _source
+
+		annotation SummarizationSetBy = Automatic
+
+	column _is_valid
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6608a87a-5432-4db9-968e-f3c23acf9910
+		sourceLineageTag: _is_valid
+		summarizeBy: none
+		sourceColumn: _is_valid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition policies = entity
+		mode: directLake
+		source
+			entityName: policies
+			schemaName: Silver
+			expressionSource: 'DirectLake - LH_Insurance'
+

@@ -1,0 +1,11 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata":  {
+                     "type":  "SemanticModel",
+                     "displayName":  "SM_Gold_InsuranceDemo"
+                 },
+    "config":  {
+                   "version":  "2.0",
+                   "logicalId":  "4b29f860-cbb0-47c4-9654-7662e202c9e2"
+               }
+}

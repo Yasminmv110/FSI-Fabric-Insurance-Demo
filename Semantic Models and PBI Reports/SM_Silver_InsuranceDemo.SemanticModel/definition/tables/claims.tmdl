@@ -1,0 +1,203 @@
+﻿table claims
+	lineageTag: 95edb0ba-a810-4a77-a58f-dbd3d6b3bbdc
+	sourceLineageTag: [Silver].[claims]
+
+	column claim_id
+		dataType: string
+		lineageTag: 61b27291-5039-4aa3-ba80-4da4f1994330
+		sourceLineageTag: claim_id
+		summarizeBy: none
+		sourceColumn: claim_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column claim_number
+		dataType: string
+		lineageTag: 3ba6be80-400e-42a4-a5fa-41555cf63a58
+		sourceLineageTag: claim_number
+		summarizeBy: none
+		sourceColumn: claim_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column policy_id
+		dataType: string
+		lineageTag: ac8194bb-2b99-4528-b190-f8a04fa8d2d1
+		sourceLineageTag: policy_id
+		summarizeBy: none
+		sourceColumn: policy_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column policyholder_id
+		dataType: string
+		lineageTag: 7012a260-5dbd-4e3f-a973-99de593eee09
+		sourceLineageTag: policyholder_id
+		summarizeBy: none
+		sourceColumn: policyholder_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_id
+		dataType: string
+		lineageTag: 2b13ac0a-12c2-45b1-b5b5-b583e0cc6f31
+		sourceLineageTag: asset_id
+		summarizeBy: none
+		sourceColumn: asset_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column adjuster_id
+		dataType: string
+		lineageTag: 0a1bf343-fbe6-476a-9e76-451a7d009b37
+		sourceLineageTag: adjuster_id
+		summarizeBy: none
+		sourceColumn: adjuster_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column office_id
+		dataType: string
+		lineageTag: 9fc682e1-c068-4e6e-9f4e-23760d420ead
+		sourceLineageTag: office_id
+		summarizeBy: none
+		sourceColumn: office_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column claim_type
+		dataType: string
+		lineageTag: b5f06b7a-d0f3-43fd-b177-33617c3e2225
+		sourceLineageTag: claim_type
+		summarizeBy: none
+		sourceColumn: claim_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 6a9570ad-daa2-4053-965a-5f4c7caf793a
+		sourceLineageTag: description
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column incident_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8a793539-fbf6-4e7b-b97d-7f1e330c0356
+		sourceLineageTag: incident_date
+		summarizeBy: none
+		sourceColumn: incident_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column filed_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dfbb9b62-7fef-491a-9c0f-52dd93538160
+		sourceLineageTag: filed_date
+		summarizeBy: none
+		sourceColumn: filed_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 5af0f7a0-64b9-4fff-b9cf-f50d8ce40fb8
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column estimated_loss
+		dataType: double
+		lineageTag: dd82c814-9555-445a-993b-21fad80bacba
+		sourceLineageTag: estimated_loss
+		summarizeBy: sum
+		sourceColumn: estimated_loss
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column approved_amount
+		dataType: double
+		lineageTag: 2b7d09a6-3f80-4362-bd0d-a189e40837bd
+		sourceLineageTag: approved_amount
+		summarizeBy: sum
+		sourceColumn: approved_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column priority
+		dataType: string
+		lineageTag: 81e0b492-045c-4be0-bd1a-28be60f6fdba
+		sourceLineageTag: priority
+		summarizeBy: none
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column incident_latitude
+		dataType: double
+		lineageTag: e630b2a2-f421-4c29-95cc-880202e6bfec
+		sourceLineageTag: incident_latitude
+		summarizeBy: sum
+		sourceColumn: incident_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column incident_longitude
+		dataType: double
+		lineageTag: 5c48a73e-b3ec-42ef-8b97-bf4f67bf945c
+		sourceLineageTag: incident_longitude
+		summarizeBy: sum
+		sourceColumn: incident_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column _silver_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0e229a4b-2edb-4ca8-a6ea-c2a46b1fc195
+		sourceLineageTag: _silver_processed_ts
+		summarizeBy: none
+		sourceColumn: _silver_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column _source
+		dataType: string
+		lineageTag: 167c49b2-583f-4d6e-bf64-188f2cbf4362
+		sourceLineageTag: _source
+		summarizeBy: none
+		sourceColumn: _source
+
+		annotation SummarizationSetBy = Automatic
+
+	column _is_valid
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6de1a3cf-d7fc-4fa8-8982-053bcbbb0880
+		sourceLineageTag: _is_valid
+		summarizeBy: none
+		sourceColumn: _is_valid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition claims = entity
+		mode: directLake
+		source
+			entityName: claims
+			schemaName: Silver
+			expressionSource: 'DirectLake - LH_Insurance'
+

@@ -1,0 +1,170 @@
+﻿table insured_assets
+	lineageTag: e6200875-3f0c-4946-8ac3-5370ee12b3e6
+	sourceLineageTag: [Silver].[insured_assets]
+
+	column asset_id
+		dataType: string
+		lineageTag: 7a52cde5-0219-448e-bf2c-0593c832ba87
+		sourceLineageTag: asset_id
+		summarizeBy: none
+		sourceColumn: asset_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_number
+		dataType: string
+		lineageTag: b7077733-5a2d-4bd8-92f4-e472445c3091
+		sourceLineageTag: asset_number
+		summarizeBy: none
+		sourceColumn: asset_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_type
+		dataType: string
+		lineageTag: 367949c4-aff9-4c68-912f-50e54b0eae9f
+		sourceLineageTag: asset_type
+		summarizeBy: none
+		sourceColumn: asset_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_description
+		dataType: string
+		lineageTag: ef5af445-b6ab-46a2-86ba-64401e653c12
+		sourceLineageTag: asset_description
+		summarizeBy: none
+		sourceColumn: asset_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column make
+		dataType: string
+		lineageTag: 09c4ee4a-ac27-43e3-a703-3a5d9fe8ac30
+		sourceLineageTag: make
+		summarizeBy: none
+		sourceColumn: make
+
+		annotation SummarizationSetBy = Automatic
+
+	column model
+		dataType: string
+		lineageTag: 13c5ae94-311c-4d3f-aec6-d9b18a1a95c3
+		sourceLineageTag: model
+		summarizeBy: none
+		sourceColumn: model
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: ca169672-b05e-4c56-aad9-7ac9e82fe890
+		sourceLineageTag: year
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column vin
+		dataType: string
+		lineageTag: 865c7362-f038-4c52-9a03-27d30d7bc42c
+		sourceLineageTag: vin
+		summarizeBy: none
+		sourceColumn: vin
+
+		annotation SummarizationSetBy = Automatic
+
+	column address
+		dataType: string
+		lineageTag: b55c0e4d-1765-4848-9dbf-f68f66213110
+		sourceLineageTag: address
+		summarizeBy: none
+		sourceColumn: address
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: c733537c-4d55-4a9e-9e40-3256fc1a6e0f
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: effbfdbb-31c3-459d-baf5-da607da72022
+		sourceLineageTag: state
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column estimated_value
+		dataType: double
+		lineageTag: b2f8afc1-d7ef-4c15-ab70-afce2667bfa8
+		sourceLineageTag: estimated_value
+		summarizeBy: sum
+		sourceColumn: estimated_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column condition
+		dataType: string
+		lineageTag: a8a72c7a-8831-4e84-8b78-ad3b9d7980be
+		sourceLineageTag: condition
+		summarizeBy: none
+		sourceColumn: condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_inspection_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 767b0cc4-caed-4e20-bbe0-eeaadc659e43
+		sourceLineageTag: last_inspection_date
+		summarizeBy: none
+		sourceColumn: last_inspection_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column _silver_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f1b3ce53-e8bd-401d-8c1a-e01da4c9d700
+		sourceLineageTag: _silver_processed_ts
+		summarizeBy: none
+		sourceColumn: _silver_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column _source
+		dataType: string
+		lineageTag: f72cb463-e84b-4981-80ba-2ea56ffca08b
+		sourceLineageTag: _source
+		summarizeBy: none
+		sourceColumn: _source
+
+		annotation SummarizationSetBy = Automatic
+
+	column _is_valid
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fd42b83b-5fa4-4525-9542-f1b151951749
+		sourceLineageTag: _is_valid
+		summarizeBy: none
+		sourceColumn: _is_valid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition insured_assets = entity
+		mode: directLake
+		source
+			entityName: insured_assets
+			schemaName: Silver
+			expressionSource: 'DirectLake - LH_Insurance'
+

@@ -1,0 +1,1483 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+    "artifactId":  "00000000-0000-0000-0000-000000000000",
+    "workspaceId":  "00000000-0000-0000-0000-000000000000",
+    "dataSourceInstructions":  null,
+    "displayName":  "SM_Silver_InsuranceDemo",
+    "type":  "semantic_model",
+    "userDescription":  null,
+    "metadata":  {
+
+                 },
+    "elements":  [
+                     {
+                         "id":  "9ab074cb-2e65-47e0-a3c0-e3f4cbe393ac",
+                         "is_selected":  false,
+                         "display_name":  "adjusters",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "c9613008-80b7-4607-9f06-a1edd7474270",
+                                              "is_selected":  true,
+                                              "display_name":  "adjuster_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "8a105c64-72d7-4a3e-aaa3-794480c9f5b2",
+                                              "is_selected":  true,
+                                              "display_name":  "employee_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b38fcc69-6b56-4cce-8699-15a12c3929cf",
+                                              "is_selected":  true,
+                                              "display_name":  "first_name",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "008c8618-d798-4ad6-93ad-6b1acad605ac",
+                                              "is_selected":  true,
+                                              "display_name":  "last_name",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "3c4893f5-37d5-4c39-85d4-e70b0d28f793",
+                                              "is_selected":  true,
+                                              "display_name":  "email",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "48b3dbf1-70f3-4cf2-a04f-6b6c8cdd8fe1",
+                                              "is_selected":  true,
+                                              "display_name":  "phone",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "4fd3edd0-c42d-4f5b-9fb2-66399aee13ae",
+                                              "is_selected":  true,
+                                              "display_name":  "license_number",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "0e56d808-b56a-4ee5-8c5a-89b226056dce",
+                                              "is_selected":  true,
+                                              "display_name":  "license_state",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "570b236a-e9e4-4ba7-a5c8-c15c6e7d5e8a",
+                                              "is_selected":  true,
+                                              "display_name":  "specializations",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "78ee45b2-8886-4ca7-9d70-b733bf136a0f",
+                                              "is_selected":  true,
+                                              "display_name":  "hire_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "c68ff85f-ec5a-442d-8042-18400f2fee06",
+                                              "is_selected":  true,
+                                              "display_name":  "status",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "a5299cbd-8e9c-4789-8e73-e024ee46d94d",
+                                              "is_selected":  true,
+                                              "display_name":  "home_office_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "5bc34c93-b457-4af6-9cf7-624b7176730e",
+                                              "is_selected":  true,
+                                              "display_name":  "supervisor_email",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "acf0bd0e-866a-4c3f-ad4d-73e573c084f5",
+                                              "is_selected":  true,
+                                              "display_name":  "max_active_claims",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Int64",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "d97575ae-9303-4ac7-ad4a-6e5c16368ed5",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "08b6eddc-b395-4d6f-ac77-fa4cf52a8bcb",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "e5788a8b-10be-4feb-a80c-b03a5b8ffdd2",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "4a41ef98-aa1b-490e-bff1-3031b771e1dc",
+                         "is_selected":  false,
+                         "display_name":  "asset_inspections",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "bf71e097-4b0f-49ae-b5a3-609de66091da",
+                                              "is_selected":  true,
+                                              "display_name":  "inspection_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "ccfa6964-0d76-44a9-a549-9fcc9b04c36c",
+                                              "is_selected":  true,
+                                              "display_name":  "asset_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "9abb1ebc-e5de-4afe-9800-30eb7169e9f8",
+                                              "is_selected":  true,
+                                              "display_name":  "office_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "aaaefbc2-1fdc-4586-bb23-e7f9fe1a50f8",
+                                              "is_selected":  true,
+                                              "display_name":  "inspection_type",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "f74a0801-bbd0-45dc-9fe1-7bc1669e4a2d",
+                                              "is_selected":  true,
+                                              "display_name":  "status",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "69c3b6de-044f-4fd3-b7f2-50e8d5e312d6",
+                                              "is_selected":  true,
+                                              "display_name":  "scheduled_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "5a38abd1-a524-4f31-b30b-33653ef34a8b",
+                                              "is_selected":  true,
+                                              "display_name":  "completed_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "7030f255-a9f6-4db3-aa5b-8be108c72a0d",
+                                              "is_selected":  true,
+                                              "display_name":  "appraised_value",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "67ac488c-dce6-4224-9b3c-cee3420a4c88",
+                                              "is_selected":  true,
+                                              "display_name":  "inspector_notes",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "3c09a417-0f04-4bcf-823d-4668ee9f0d88",
+                                              "is_selected":  true,
+                                              "display_name":  "condition_rating",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "d41b942c-a341-4c77-bdbc-2bf428a20845",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "f219ef96-0677-4027-9871-d44c09343b6a",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "eafeb31b-0d5b-40db-ba73-fc86a73973a3",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "e6200875-3f0c-4946-8ac3-5370ee12b3e6",
+                         "is_selected":  false,
+                         "display_name":  "insured_assets",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "7a52cde5-0219-448e-bf2c-0593c832ba87",
+                                              "is_selected":  true,
+                                              "display_name":  "asset_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b7077733-5a2d-4bd8-92f4-e472445c3091",
+                                              "is_selected":  true,
+                                              "display_name":  "asset_number",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "367949c4-aff9-4c68-912f-50e54b0eae9f",
+                                              "is_selected":  true,
+                                              "display_name":  "asset_type",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "ef5af445-b6ab-46a2-86ba-64401e653c12",
+                                              "is_selected":  true,
+                                              "display_name":  "asset_description",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "09c4ee4a-ac27-43e3-a703-3a5d9fe8ac30",
+                                              "is_selected":  true,
+                                              "display_name":  "make",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "13c5ae94-311c-4d3f-aec6-d9b18a1a95c3",
+                                              "is_selected":  true,
+                                              "display_name":  "model",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "ca169672-b05e-4c56-aad9-7ac9e82fe890",
+                                              "is_selected":  true,
+                                              "display_name":  "year",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Int64",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "865c7362-f038-4c52-9a03-27d30d7bc42c",
+                                              "is_selected":  true,
+                                              "display_name":  "vin",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b55c0e4d-1765-4848-9dbf-f68f66213110",
+                                              "is_selected":  true,
+                                              "display_name":  "address",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "c733537c-4d55-4a9e-9e40-3256fc1a6e0f",
+                                              "is_selected":  true,
+                                              "display_name":  "city",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "effbfdbb-31c3-459d-baf5-da607da72022",
+                                              "is_selected":  true,
+                                              "display_name":  "state",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b2f8afc1-d7ef-4c15-ab70-afce2667bfa8",
+                                              "is_selected":  true,
+                                              "display_name":  "estimated_value",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "a8a72c7a-8831-4e84-8b78-ad3b9d7980be",
+                                              "is_selected":  true,
+                                              "display_name":  "condition",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "767b0cc4-caed-4e20-bbe0-eeaadc659e43",
+                                              "is_selected":  true,
+                                              "display_name":  "last_inspection_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "f1b3ce53-e8bd-401d-8c1a-e01da4c9d700",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "f72cb463-e84b-4981-80ba-2ea56ffca08b",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "fd42b83b-5fa4-4525-9542-f1b151951749",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "5a6a1f29-3650-43c4-b8bf-df84aa14b577",
+                         "is_selected":  false,
+                         "display_name":  "offices",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "f529e962-fc11-4ba6-96f6-7d87e6733858",
+                                              "is_selected":  true,
+                                              "display_name":  "office_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b05b5fd1-fa5a-451e-a8a9-a0920dbc544d",
+                                              "is_selected":  true,
+                                              "display_name":  "name",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "aacefac3-0d55-4b0b-9037-bedf881c332c",
+                                              "is_selected":  true,
+                                              "display_name":  "office_type",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "a0a93a4e-68b5-4cdc-9c1f-fd8f1560e653",
+                                              "is_selected":  true,
+                                              "display_name":  "address",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "fd9caded-9446-4dbe-94bb-6e271122bb54",
+                                              "is_selected":  true,
+                                              "display_name":  "city",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "6b76d706-685f-4b4b-9894-53b03271c1c7",
+                                              "is_selected":  true,
+                                              "display_name":  "state",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "052f1d30-a73a-4d04-8e97-080accbde702",
+                                              "is_selected":  true,
+                                              "display_name":  "zip_code",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "632fa5f8-6335-4bb5-bf36-4e7ffce0ff4f",
+                                              "is_selected":  true,
+                                              "display_name":  "latitude",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "d5454439-12e8-4314-b33d-468fff6867c8",
+                                              "is_selected":  true,
+                                              "display_name":  "longitude",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "88ac10f1-daac-499d-9a17-01a1e3d10229",
+                                              "is_selected":  true,
+                                              "display_name":  "timezone",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "111c6bbb-15be-4e12-afaf-9d5e8b1ac9cf",
+                                              "is_selected":  true,
+                                              "display_name":  "phone",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "ab0c1094-89b1-45e0-94db-1895b7b34ffd",
+                                              "is_selected":  true,
+                                              "display_name":  "adjuster_capacity",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Int64",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "f34fbe3f-6a11-43df-985c-75041691055f",
+                                              "is_selected":  true,
+                                              "display_name":  "has_siu_unit",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "70c964a0-c0f3-45a7-8b27-917fed8b6659",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "4ba34bc1-58b6-4e37-8e5c-4f1786b59f83",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "c6c27d0c-d8f2-4d77-88cc-64ba93ab711f",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "4e44bcf6-ca17-4bda-9a94-584528e2a6d2",
+                         "is_selected":  false,
+                         "display_name":  "policies",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "68d54827-001c-449b-9b92-c7df1e8fc0bd",
+                                              "is_selected":  true,
+                                              "display_name":  "policy_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "e43119eb-f673-4b63-a07b-1da2522bee0c",
+                                              "is_selected":  true,
+                                              "display_name":  "policy_number",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "7e55be9b-beb6-42b8-9309-eb271a4698f9",
+                                              "is_selected":  true,
+                                              "display_name":  "policyholder_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "2a68565d-8d5b-4304-8051-eea35396a72b",
+                                              "is_selected":  true,
+                                              "display_name":  "asset_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "3da1f946-0a8e-4a52-8740-49ff293b17be",
+                                              "is_selected":  true,
+                                              "display_name":  "policy_type",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "71977ed7-7ad8-4881-879e-22f955fd263c",
+                                              "is_selected":  true,
+                                              "display_name":  "coverage_amount",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b4230b7b-e2fc-4a9b-997a-26f4f0525c6e",
+                                              "is_selected":  true,
+                                              "display_name":  "deductible",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "fd48ac6a-57c1-4ce5-9eab-91d854709797",
+                                              "is_selected":  true,
+                                              "display_name":  "premium_annual",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "08da18da-451a-45ea-9bec-18186b851657",
+                                              "is_selected":  true,
+                                              "display_name":  "effective_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "3d090a28-1087-497b-a053-01458c5b72dd",
+                                              "is_selected":  true,
+                                              "display_name":  "expiration_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "f85addee-581f-43b4-8b6a-6c2753bd8fca",
+                                              "is_selected":  true,
+                                              "display_name":  "status",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "202bb13d-44e0-40cd-aed3-af0ac2a33b6b",
+                                              "is_selected":  true,
+                                              "display_name":  "underwriter",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "cb5b4363-b67b-4682-b551-bb81f7829711",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b716fa17-b564-4f05-a992-23064f8c5e0c",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "6608a87a-5432-4db9-968e-f3c23acf9910",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "2b5cd68c-2fcd-445a-81b0-a17530375c7d",
+                         "is_selected":  false,
+                         "display_name":  "policyholders",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "c58f9e36-a7c4-4d61-9fd9-ec5fe3c00faa",
+                                              "is_selected":  true,
+                                              "display_name":  "policyholder_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b4676444-dd73-4a78-be0b-e15b9f7c7e0b",
+                                              "is_selected":  true,
+                                              "display_name":  "policyholder_number",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "3113de46-d563-48af-aa10-506102e9f507",
+                                              "is_selected":  true,
+                                              "display_name":  "full_name",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "8f015996-be94-45d0-8a91-d2e37b12c6f2",
+                                              "is_selected":  true,
+                                              "display_name":  "policyholder_type",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "313c8542-cbd6-470b-9819-83057f340f1e",
+                                              "is_selected":  true,
+                                              "display_name":  "email",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "28426e3d-1eed-446c-9e04-f1426b9db572",
+                                              "is_selected":  true,
+                                              "display_name":  "phone",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "ec624969-c29e-47df-a00d-8a7df15596b5",
+                                              "is_selected":  true,
+                                              "display_name":  "address",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "07d1d8ea-455e-4062-a3fc-902e9f1775af",
+                                              "is_selected":  true,
+                                              "display_name":  "city",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "188e395e-b27a-40ce-a76c-114dd63e6ecb",
+                                              "is_selected":  true,
+                                              "display_name":  "state",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "1ce5af61-beac-478f-a7b5-f95205da730f",
+                                              "is_selected":  true,
+                                              "display_name":  "zip_code",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "cbc876d1-93b5-4012-9827-03a33136f09a",
+                                              "is_selected":  true,
+                                              "display_name":  "date_of_birth",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "59f426ac-6468-459e-b214-451c999e1f7c",
+                                              "is_selected":  true,
+                                              "display_name":  "risk_score",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Int64",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "7f51f5b4-4597-4235-b21e-f9e3ebb38049",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "0f6dde51-6f43-46cc-8566-c4cb8bae9b04",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "2c3b0287-82dc-4971-b2a3-4fe0bd1e1412",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "301bc9b8-13ec-411d-8e0e-d4127b22f92a",
+                         "is_selected":  false,
+                         "display_name":  "claim_events",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "ac620d7a-045d-479a-b4c0-52ce1aa57161",
+                                              "is_selected":  true,
+                                              "display_name":  "claim_event_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "8eb6930a-baf4-459e-ba32-719ab3bbce92",
+                                              "is_selected":  true,
+                                              "display_name":  "event_number",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "167534ac-c717-45db-9093-ba29e9c9c5b8",
+                                              "is_selected":  true,
+                                              "display_name":  "claim_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "c1a8a311-c106-4697-b463-c8b9a481b42f",
+                                              "is_selected":  true,
+                                              "display_name":  "adjuster_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "4a9b55ff-a606-48ca-9d8b-87f13f3e4653",
+                                              "is_selected":  true,
+                                              "display_name":  "event_type",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "8ba63ccd-25dd-4ca1-bb27-004b959f7f97",
+                                              "is_selected":  true,
+                                              "display_name":  "description",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "90abb6ec-b153-4228-8c64-2c607ead06fd",
+                                              "is_selected":  true,
+                                              "display_name":  "status",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "2b7f9c1a-6827-4ffe-a881-a20e5db019e1",
+                                              "is_selected":  true,
+                                              "display_name":  "created_at",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "5f523d50-00fd-4458-9597-d287b34a9aec",
+                                              "is_selected":  true,
+                                              "display_name":  "completed_at",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "9973becb-0de3-4b0a-a531-7ad4ef65e95a",
+                                              "is_selected":  true,
+                                              "display_name":  "notes",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "ff71730a-d55d-4df5-8eb6-62532d065220",
+                                              "is_selected":  true,
+                                              "display_name":  "cost_usd",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "2e25938c-fd9f-4907-ba8f-34ec98805222",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "784f0d38-5ff7-4a71-8382-b40d416233f0",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "40a42ec8-5c2c-4cf5-82a1-ebf28ae7aead",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "95edb0ba-a810-4a77-a58f-dbd3d6b3bbdc",
+                         "is_selected":  false,
+                         "display_name":  "claims",
+                         "type":  "semantic_model.table",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "61b27291-5039-4aa3-ba80-4da4f1994330",
+                                              "is_selected":  true,
+                                              "display_name":  "claim_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "3ba6be80-400e-42a4-a5fa-41555cf63a58",
+                                              "is_selected":  true,
+                                              "display_name":  "claim_number",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "ac8194bb-2b99-4528-b190-f8a04fa8d2d1",
+                                              "is_selected":  true,
+                                              "display_name":  "policy_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "7012a260-5dbd-4e3f-a973-99de593eee09",
+                                              "is_selected":  true,
+                                              "display_name":  "policyholder_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "2b13ac0a-12c2-45b1-b5b5-b583e0cc6f31",
+                                              "is_selected":  true,
+                                              "display_name":  "asset_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "0a1bf343-fbe6-476a-9e76-451a7d009b37",
+                                              "is_selected":  true,
+                                              "display_name":  "adjuster_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "9fc682e1-c068-4e6e-9f4e-23760d420ead",
+                                              "is_selected":  true,
+                                              "display_name":  "office_id",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "b5f06b7a-d0f3-43fd-b177-33617c3e2225",
+                                              "is_selected":  true,
+                                              "display_name":  "claim_type",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "6a9570ad-daa2-4053-965a-5f4c7caf793a",
+                                              "is_selected":  true,
+                                              "display_name":  "description",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "8a793539-fbf6-4e7b-b97d-7f1e330c0356",
+                                              "is_selected":  true,
+                                              "display_name":  "incident_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "dfbb9b62-7fef-491a-9c0f-52dd93538160",
+                                              "is_selected":  true,
+                                              "display_name":  "filed_date",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "5af0f7a0-64b9-4fff-b9cf-f50d8ce40fb8",
+                                              "is_selected":  true,
+                                              "display_name":  "status",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "dd82c814-9555-445a-993b-21fad80bacba",
+                                              "is_selected":  true,
+                                              "display_name":  "estimated_loss",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "2b7d09a6-3f80-4362-bd0d-a189e40837bd",
+                                              "is_selected":  true,
+                                              "display_name":  "approved_amount",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "81e0b492-045c-4be0-bd1a-28be60f6fdba",
+                                              "is_selected":  true,
+                                              "display_name":  "priority",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "e630b2a2-f421-4c29-95cc-880202e6bfec",
+                                              "is_selected":  true,
+                                              "display_name":  "incident_latitude",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "5c48a73e-b3ec-42ef-8b97-bf4f67bf945c",
+                                              "is_selected":  true,
+                                              "display_name":  "incident_longitude",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Double",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "0e229a4b-2edb-4ca8-a6ea-c2a46b1fc195",
+                                              "is_selected":  true,
+                                              "display_name":  "_silver_processed_ts",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "DateTime",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "167c49b2-583f-4d6e-bf64-188f2cbf4362",
+                                              "is_selected":  true,
+                                              "display_name":  "_source",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "String",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          },
+                                          {
+                                              "id":  "6de1a3cf-d7fc-4fa8-8982-053bcbbb0880",
+                                              "is_selected":  true,
+                                              "display_name":  "_is_valid",
+                                              "type":  "semantic_model.column",
+                                              "data_type":  "Boolean",
+                                              "description":  null,
+                                              "children":  [
+
+                                                           ]
+                                          }
+                                      ]
+                     }
+                 ]
+}

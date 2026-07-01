@@ -1,0 +1,142 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+    "name":  "8dc772bff25b908241ef",
+    "position":  {
+                     "x":  289.77361436377834,
+                     "y":  17.985948477751759,
+                     "z":  2,
+                     "height":  282.77907884465264,
+                     "width":  331.74082747853242,
+                     "tabOrder":  2
+                 },
+    "visual":  {
+                   "visualType":  "hundredPercentStackedColumnChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "claim_events"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "event_type"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "claim_events.event_type",
+                                                                                             "nativeQueryRef":  "event_type",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Series":  {
+                                                                   "projections":  [
+
+                                                                                   ]
+                                                               },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "claim_events"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "description"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  5
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "CountNonNull(claim_events.description)",
+                                                                                      "nativeQueryRef":  "Count of description"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Aggregation":  {
+                                                                                                           "Expression":  {
+                                                                                                                              "Column":  {
+                                                                                                                                             "Expression":  {
+                                                                                                                                                                "SourceRef":  {
+                                                                                                                                                                                  "Entity":  "claim_events"
+                                                                                                                                                                              }
+                                                                                                                                                            },
+                                                                                                                                             "Property":  "description"
+                                                                                                                                         }
+                                                                                                                          },
+                                                                                                           "Function":  5
+                                                                                                       }
+                                                                                   },
+                                                                         "direction":  "Descending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Claim Events\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "605c216163f42cf47e0f",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "claim_events"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "event_type"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         },
+                                         {
+                                             "name":  "a74e0caacc0b106fec13",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "claim_events"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "description"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  5
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         }
+                                     ]
+                     }
+}

@@ -1,0 +1,119 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+    "name":  "6693d5c356aab69a0622",
+    "position":  {
+                     "x":  290,
+                     "y":  301,
+                     "z":  6,
+                     "height":  269,
+                     "width":  332,
+                     "tabOrder":  6
+                 },
+    "visual":  {
+                   "visualType":  "treemap",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Details":  {
+                                                                    "projections":  [
+
+                                                                                    ]
+                                                                },
+                                                    "Group":  {
+                                                                  "projections":  [
+                                                                                      {
+                                                                                          "field":  {
+                                                                                                        "Column":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "offices"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "office_type"
+                                                                                                                   }
+                                                                                                    },
+                                                                                          "queryRef":  "offices.office_type",
+                                                                                          "nativeQueryRef":  "office_type",
+                                                                                          "active":  true
+                                                                                      }
+                                                                                  ]
+                                                              },
+                                                    "Values":  {
+                                                                   "projections":  [
+                                                                                       {
+                                                                                           "field":  {
+                                                                                                         "Aggregation":  {
+                                                                                                                             "Expression":  {
+                                                                                                                                                "Column":  {
+                                                                                                                                                               "Expression":  {
+                                                                                                                                                                                  "SourceRef":  {
+                                                                                                                                                                                                    "Entity":  "offices"
+                                                                                                                                                                                                }
+                                                                                                                                                                              },
+                                                                                                                                                               "Property":  "adjuster_capacity"
+                                                                                                                                                           }
+                                                                                                                                            },
+                                                                                                                             "Function":  0
+                                                                                                                         }
+                                                                                                     },
+                                                                                           "queryRef":  "Sum(offices.adjuster_capacity)",
+                                                                                           "nativeQueryRef":  "Sum of adjuster_capacity"
+                                                                                       }
+                                                                                   ]
+                                                               }
+                                                }
+                             },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Offices\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "ef5e670e1b30873bb633",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "offices"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "office_type"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         },
+                                         {
+                                             "name":  "2d680b97fa5d8f3d5da4",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "offices"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "adjuster_capacity"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  0
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         }
+                                     ]
+                     }
+}

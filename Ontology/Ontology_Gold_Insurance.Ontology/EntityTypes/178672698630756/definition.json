@@ -1,0 +1,98 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+    "id":  "178672698630756",
+    "namespace":  "usertypes",
+    "baseEntityTypeId":  null,
+    "name":  "gold_avg_loss_by_claim_type",
+    "entityIdParts":  [
+
+                      ],
+    "displayNamePropertyId":  null,
+    "namespaceType":  "Imported",
+    "visibility":  "Visible",
+    "properties":  [
+                       {
+                           "id":  "8091757859101614097",
+                           "name":  "claim_type",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757835314387172",
+                           "name":  "total_claims",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091757812439985651",
+                           "name":  "avg_estimated_loss",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757788745560823",
+                           "name":  "max_estimated_loss",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757768049484250",
+                           "name":  "min_estimated_loss",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757746426078310",
+                           "name":  "avg_approved_amount",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757723499940814",
+                           "name":  "total_approved_amount",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757697654423418",
+                           "name":  "avg_approval_rate_pct",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757676931897047",
+                           "name":  "most_common_status",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757658238797401",
+                           "name":  "avg_days_to_file",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "8091757636346039883",
+                           "name":  "gold_processed_ts",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       }
+                   ],
+    "timeseriesProperties":  [
+
+                             ],
+    "untypedProperties":  [
+
+                          ]
+}

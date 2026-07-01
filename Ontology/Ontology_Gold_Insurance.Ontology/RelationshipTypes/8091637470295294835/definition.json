@@ -1,0 +1,13 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+    "namespace":  "usertypes",
+    "id":  "8091637470295294835",
+    "name":  "gold_fraud_flags_has_gold_policyholder_risk_profile",
+    "namespaceType":  "Imported",
+    "source":  {
+                   "entityTypeId":  "155106259677628"
+               },
+    "target":  {
+                   "entityTypeId":  "101723957850862"
+               }
+}

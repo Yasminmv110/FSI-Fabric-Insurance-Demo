@@ -1,0 +1,23 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+    "id":  "40642fa3-c192-49fa-845f-6ceb00677681",
+    "dataBindingTable":  {
+                             "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                             "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                             "sourceTableName":  "adjusters",
+                             "sourceSchema":  "Silver",
+                             "sourceType":  "LakehouseTable"
+                         },
+    "sourceKeyRefBindings":  [
+                                 {
+                                     "sourceColumnName":  "adjuster_id",
+                                     "targetPropertyId":  "3996336597040452635"
+                                 }
+                             ],
+    "targetKeyRefBindings":  [
+                                 {
+                                     "sourceColumnName":  "adjuster_id",
+                                     "targetPropertyId":  "3996335413943354263"
+                                 }
+                             ]
+}

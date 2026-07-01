@@ -1,0 +1,86 @@
+﻿{
+    "properties":  {
+                       "activities":  [
+                                          {
+                                              "type":  "TridentNotebook",
+                                              "typeProperties":  {
+                                                                     "notebookId":  "9c9a3893-88ca-487a-af7a-d2ead9188d49",
+                                                                     "workspaceId":  "00000000-0000-0000-0000-000000000000"
+                                                                 },
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "name":  "Notebook- Upload Reference Data",
+                                              "state":  "Active",
+                                              "dependsOn":  [
+
+                                                            ]
+                                          },
+                                          {
+                                              "type":  "TridentNotebook",
+                                              "typeProperties":  {
+                                                                     "notebookId":  "0fb2cde7-4e74-4684-a131-54ba772f3094",
+                                                                     "workspaceId":  "00000000-0000-0000-0000-000000000000"
+                                                                 },
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "name":  "Notebook- Bronze_to_Silver",
+                                              "state":  "Active",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "Notebook- Upload Reference Data",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ]
+                                          },
+                                          {
+                                              "type":  "SqlServerStoredProcedure",
+                                              "typeProperties":  {
+                                                                     "storedProcedureName":  "[gold].[usp_Load_Silver_to_Gold]"
+                                                                 },
+                                              "linkedService":  {
+                                                                    "name":  "WH_Insurance",
+                                                                    "properties":  {
+                                                                                       "type":  "DataWarehouse",
+                                                                                       "typeProperties":  {
+                                                                                                              "artifactId":  "00000000-0000-0000-0000-000000000000",
+                                                                                                              "endpoint":  "",
+                                                                                                              "workspaceId":  "00000000-0000-0000-0000-000000000000"
+                                                                                                          },
+                                                                                       "annotations":  [
+
+                                                                                                       ]
+                                                                                   }
+                                                                },
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "name":  "SP- Silver to Gold",
+                                              "state":  "Active",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "Notebook- Bronze_to_Silver",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ]
+                                          }
+                                      ]
+                   }
+}

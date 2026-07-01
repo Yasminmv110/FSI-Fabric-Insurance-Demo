@@ -1,0 +1,126 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+    "id":  "174568541672823",
+    "namespace":  "usertypes",
+    "baseEntityTypeId":  null,
+    "name":  "policies",
+    "entityIdParts":  [
+                          "3996335022834426969"
+                      ],
+    "displayNamePropertyId":  null,
+    "namespaceType":  "Imported",
+    "visibility":  "Visible",
+    "properties":  [
+                       {
+                           "id":  "3996335022834426969",
+                           "name":  "policy_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334994592549689",
+                           "name":  "policy_number",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334975722651577",
+                           "name":  "policyholder_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334950768961713",
+                           "name":  "asset_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334929028749130",
+                           "name":  "policy_type",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334904480164208",
+                           "name":  "coverage_amount",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996334886120027199",
+                           "name":  "deductible",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996334860851791305",
+                           "name":  "premium_annual",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996334839097898736",
+                           "name":  "effective_date",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996334817163542683",
+                           "name":  "expiration_date",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996334790667918694",
+                           "name":  "status",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334768733194888",
+                           "name":  "underwriter",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334742019001047",
+                           "name":  "silver_processed_ts",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996334721860935850",
+                           "name":  "source",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996334699246581098",
+                           "name":  "is_valid",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       }
+                   ],
+    "timeseriesProperties":  [
+
+                             ],
+    "untypedProperties":  [
+
+                          ]
+}

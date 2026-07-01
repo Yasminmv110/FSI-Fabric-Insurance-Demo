@@ -1,0 +1,13 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+    "namespace":  "usertypes",
+    "id":  "8091606580864034966",
+    "name":  "gold_adjuster_performance_has_gold_claims_by_adjuster",
+    "namespaceType":  "Imported",
+    "source":  {
+                   "entityTypeId":  "119751769788371"
+               },
+    "target":  {
+                   "entityTypeId":  "194083074641154"
+               }
+}

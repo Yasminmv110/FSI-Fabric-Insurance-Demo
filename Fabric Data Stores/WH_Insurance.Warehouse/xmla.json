@@ -1,0 +1,1375 @@
+﻿{
+    "name":  "{{Dataset_Name}}",
+    "compatibilityLevel":  1604,
+    "model":  {
+                  "name":  "{{Dataset_Name}}",
+                  "culture":  "en-US",
+                  "collation":  "Latin1_General_100_BIN2_UTF8",
+                  "dataAccessOptions":  {
+                                            "legacyRedirects":  true,
+                                            "returnErrorValuesAsNull":  true
+                                        },
+                  "defaultPowerBIDataSourceVersion":  "powerBI_V3",
+                  "sourceQueryCulture":  "en-US",
+                  "tables":  [
+                                 {
+                                     "name":  "gold_adjuster_performance",
+                                     "sourceLineageTag":  "[gold].[gold_adjuster_performance]",
+                                     "columns":  [
+                                                     {
+                                                         "name":  "adjuster_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "adjuster_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "adjuster_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "full_name",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "full_name",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "full_name",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "license_state",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "license_state",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "license_state",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "specializations",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "specializations",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "specializations",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "status",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "status",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "status",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "max_active_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "max_active_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "max_active_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_claims_handled",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "total_claims_handled",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "total_claims_handled",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_claim_events",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "total_claim_events",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "total_claim_events",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_cost_per_event",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "avg_cost_per_event",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_cost_per_event",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_days_event_completion",
+                                                         "dataType":  "decimal",
+                                                         "sourceColumn":  "avg_days_event_completion",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_days_event_completion",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "utilization_rate_pct",
+                                                         "dataType":  "decimal",
+                                                         "sourceColumn":  "utilization_rate_pct",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "utilization_rate_pct",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "high_fraud_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "high_fraud_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "high_fraud_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "_gold_processed_ts",
+                                                         "dataType":  "dateTime",
+                                                         "sourceColumn":  "_gold_processed_ts",
+                                                         "formatString":  "General Date",
+                                                         "sourceProviderType":  "datetime2",
+                                                         "sourceLineageTag":  "_gold_processed_ts",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     }
+                                                 ],
+                                     "partitions":  [
+                                                        {
+                                                            "name":  "{{Partition_Name}}",
+                                                            "mode":  "directLake",
+                                                            "source":  {
+                                                                           "type":  "entity",
+                                                                           "entityName":  "gold_adjuster_performance",
+                                                                           "expressionSource":  "DatabaseQuery",
+                                                                           "schemaName":  "gold"
+                                                                       }
+                                                        }
+                                                    ],
+                                     "annotations":  [
+                                                         {
+                                                             "name":  "IsTableInBiModel",
+                                                             "value":  "False"
+                                                         }
+                                                     ]
+                                 },
+                                 {
+                                     "name":  "gold_avg_loss_by_claim_type",
+                                     "sourceLineageTag":  "[gold].[gold_avg_loss_by_claim_type]",
+                                     "columns":  [
+                                                     {
+                                                         "name":  "claim_type",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "claim_type",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "claim_type",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "total_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "total_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_estimated_loss",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "avg_estimated_loss",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_estimated_loss",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "max_estimated_loss",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "max_estimated_loss",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "max_estimated_loss",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "min_estimated_loss",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "min_estimated_loss",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "min_estimated_loss",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_approved_amount",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "avg_approved_amount",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_approved_amount",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_approved_amount",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "total_approved_amount",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "total_approved_amount",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_approval_rate_pct",
+                                                         "dataType":  "decimal",
+                                                         "sourceColumn":  "avg_approval_rate_pct",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_approval_rate_pct",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "most_common_status",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "most_common_status",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "most_common_status",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_days_to_file",
+                                                         "dataType":  "decimal",
+                                                         "sourceColumn":  "avg_days_to_file",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_days_to_file",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "_gold_processed_ts",
+                                                         "dataType":  "dateTime",
+                                                         "sourceColumn":  "_gold_processed_ts",
+                                                         "formatString":  "General Date",
+                                                         "sourceProviderType":  "datetime2",
+                                                         "sourceLineageTag":  "_gold_processed_ts",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     }
+                                                 ],
+                                     "partitions":  [
+                                                        {
+                                                            "name":  "{{Partition_Name}}",
+                                                            "mode":  "directLake",
+                                                            "source":  {
+                                                                           "type":  "entity",
+                                                                           "entityName":  "gold_avg_loss_by_claim_type",
+                                                                           "expressionSource":  "DatabaseQuery",
+                                                                           "schemaName":  "gold"
+                                                                       }
+                                                        }
+                                                    ],
+                                     "annotations":  [
+                                                         {
+                                                             "name":  "IsTableInBiModel",
+                                                             "value":  "False"
+                                                         }
+                                                     ]
+                                 },
+                                 {
+                                     "name":  "gold_claims_by_adjuster",
+                                     "sourceLineageTag":  "[gold].[gold_claims_by_adjuster]",
+                                     "columns":  [
+                                                     {
+                                                         "name":  "adjuster_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "adjuster_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "adjuster_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "adjuster_full_name",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "adjuster_full_name",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "adjuster_full_name",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "home_office_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "home_office_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "home_office_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_claims_assigned",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "total_claims_assigned",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "total_claims_assigned",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "open_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "open_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "open_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "closed_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "closed_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "closed_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "pending_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "pending_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "pending_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_estimated_loss",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "avg_estimated_loss",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_estimated_loss",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_approved_amount",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "total_approved_amount",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "total_approved_amount",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_approved_amount",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "avg_approved_amount",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_approved_amount",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "approval_rate_pct",
+                                                         "dataType":  "decimal",
+                                                         "sourceColumn":  "approval_rate_pct",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "approval_rate_pct",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "high_priority_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "high_priority_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "high_priority_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_days_to_file",
+                                                         "dataType":  "decimal",
+                                                         "sourceColumn":  "avg_days_to_file",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_days_to_file",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "_gold_processed_ts",
+                                                         "dataType":  "dateTime",
+                                                         "sourceColumn":  "_gold_processed_ts",
+                                                         "formatString":  "General Date",
+                                                         "sourceProviderType":  "datetime2",
+                                                         "sourceLineageTag":  "_gold_processed_ts",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     }
+                                                 ],
+                                     "partitions":  [
+                                                        {
+                                                            "name":  "{{Partition_Name}}",
+                                                            "mode":  "directLake",
+                                                            "source":  {
+                                                                           "type":  "entity",
+                                                                           "entityName":  "gold_claims_by_adjuster",
+                                                                           "expressionSource":  "DatabaseQuery",
+                                                                           "schemaName":  "gold"
+                                                                       }
+                                                        }
+                                                    ],
+                                     "annotations":  [
+                                                         {
+                                                             "name":  "IsTableInBiModel",
+                                                             "value":  "False"
+                                                         }
+                                                     ]
+                                 },
+                                 {
+                                     "name":  "gold_claims_summary_by_office",
+                                     "sourceLineageTag":  "[gold].[gold_claims_summary_by_office]",
+                                     "columns":  [
+                                                     {
+                                                         "name":  "office_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "office_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "office_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "office_name",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "office_name",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "office_name",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "city",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "city",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "city",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "state",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "state",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "state",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "total_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "total_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "open_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "open_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "open_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "closed_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "closed_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "closed_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_estimated_loss",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "total_estimated_loss",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "total_estimated_loss",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_approved_amount",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "total_approved_amount",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "total_approved_amount",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_loss_per_claim",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "avg_loss_per_claim",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_loss_per_claim",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "fraud_flag_count",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "fraud_flag_count",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "fraud_flag_count",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "top_claim_type",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "top_claim_type",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "top_claim_type",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "_gold_processed_ts",
+                                                         "dataType":  "dateTime",
+                                                         "sourceColumn":  "_gold_processed_ts",
+                                                         "formatString":  "General Date",
+                                                         "sourceProviderType":  "datetime2",
+                                                         "sourceLineageTag":  "_gold_processed_ts",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     }
+                                                 ],
+                                     "partitions":  [
+                                                        {
+                                                            "name":  "{{Partition_Name}}",
+                                                            "mode":  "directLake",
+                                                            "source":  {
+                                                                           "type":  "entity",
+                                                                           "entityName":  "gold_claims_summary_by_office",
+                                                                           "expressionSource":  "DatabaseQuery",
+                                                                           "schemaName":  "gold"
+                                                                       }
+                                                        }
+                                                    ],
+                                     "annotations":  [
+                                                         {
+                                                             "name":  "IsTableInBiModel",
+                                                             "value":  "False"
+                                                         }
+                                                     ]
+                                 },
+                                 {
+                                     "name":  "gold_fraud_flags",
+                                     "sourceLineageTag":  "[gold].[gold_fraud_flags]",
+                                     "columns":  [
+                                                     {
+                                                         "name":  "claim_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "claim_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "claim_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "claim_number",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "claim_number",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "claim_number",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "policyholder_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "policyholder_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "policyholder_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "adjuster_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "adjuster_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "adjuster_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "asset_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "asset_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "asset_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "policy_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "policy_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "policy_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "fraud_score",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "fraud_score",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "fraud_score",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "fraud_risk_label",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "fraud_risk_label",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "fraud_risk_label",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "flag_high_loss_vs_coverage",
+                                                         "dataType":  "boolean",
+                                                         "sourceColumn":  "flag_high_loss_vs_coverage",
+                                                         "formatString":  "\"TRUE\";\"TRUE\";\"FALSE\"",
+                                                         "sourceProviderType":  "bit",
+                                                         "sourceLineageTag":  "flag_high_loss_vs_coverage",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "flag_filed_before_incident",
+                                                         "dataType":  "boolean",
+                                                         "sourceColumn":  "flag_filed_before_incident",
+                                                         "formatString":  "\"TRUE\";\"TRUE\";\"FALSE\"",
+                                                         "sourceProviderType":  "bit",
+                                                         "sourceLineageTag":  "flag_filed_before_incident",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "flag_multiple_claims_same_asset",
+                                                         "dataType":  "boolean",
+                                                         "sourceColumn":  "flag_multiple_claims_same_asset",
+                                                         "formatString":  "\"TRUE\";\"TRUE\";\"FALSE\"",
+                                                         "sourceProviderType":  "bit",
+                                                         "sourceLineageTag":  "flag_multiple_claims_same_asset",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "flag_low_approval_ratio",
+                                                         "dataType":  "boolean",
+                                                         "sourceColumn":  "flag_low_approval_ratio",
+                                                         "formatString":  "\"TRUE\";\"TRUE\";\"FALSE\"",
+                                                         "sourceProviderType":  "bit",
+                                                         "sourceLineageTag":  "flag_low_approval_ratio",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "flag_adjuster_high_volume",
+                                                         "dataType":  "boolean",
+                                                         "sourceColumn":  "flag_adjuster_high_volume",
+                                                         "formatString":  "\"TRUE\";\"TRUE\";\"FALSE\"",
+                                                         "sourceProviderType":  "bit",
+                                                         "sourceLineageTag":  "flag_adjuster_high_volume",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "flag_new_policy_claim",
+                                                         "dataType":  "boolean",
+                                                         "sourceColumn":  "flag_new_policy_claim",
+                                                         "formatString":  "\"TRUE\";\"TRUE\";\"FALSE\"",
+                                                         "sourceProviderType":  "bit",
+                                                         "sourceLineageTag":  "flag_new_policy_claim",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "flag_repeat_policyholder",
+                                                         "dataType":  "boolean",
+                                                         "sourceColumn":  "flag_repeat_policyholder",
+                                                         "formatString":  "\"TRUE\";\"TRUE\";\"FALSE\"",
+                                                         "sourceProviderType":  "bit",
+                                                         "sourceLineageTag":  "flag_repeat_policyholder",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "_gold_processed_ts",
+                                                         "dataType":  "dateTime",
+                                                         "sourceColumn":  "_gold_processed_ts",
+                                                         "formatString":  "General Date",
+                                                         "sourceProviderType":  "datetime2",
+                                                         "sourceLineageTag":  "_gold_processed_ts",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     }
+                                                 ],
+                                     "partitions":  [
+                                                        {
+                                                            "name":  "{{Partition_Name}}",
+                                                            "mode":  "directLake",
+                                                            "source":  {
+                                                                           "type":  "entity",
+                                                                           "entityName":  "gold_fraud_flags",
+                                                                           "expressionSource":  "DatabaseQuery",
+                                                                           "schemaName":  "gold"
+                                                                       }
+                                                        }
+                                                    ],
+                                     "annotations":  [
+                                                         {
+                                                             "name":  "IsTableInBiModel",
+                                                             "value":  "False"
+                                                         }
+                                                     ]
+                                 },
+                                 {
+                                     "name":  "gold_policyholder_risk_profile",
+                                     "sourceLineageTag":  "[gold].[gold_policyholder_risk_profile]",
+                                     "columns":  [
+                                                     {
+                                                         "name":  "policyholder_id",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "policyholder_id",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "policyholder_id",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "full_name",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "full_name",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "full_name",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "policyholder_type",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "policyholder_type",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "policyholder_type",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "risk_score",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "risk_score",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "risk_score",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_policies",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "total_policies",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "total_policies",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_claims",
+                                                         "dataType":  "int64",
+                                                         "sourceColumn":  "total_claims",
+                                                         "formatString":  "0",
+                                                         "sourceProviderType":  "int",
+                                                         "sourceLineageTag":  "total_claims",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_estimated_loss",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "total_estimated_loss",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "total_estimated_loss",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "total_approved_amount",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "total_approved_amount",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "total_approved_amount",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "avg_claim_amount",
+                                                         "dataType":  "double",
+                                                         "sourceColumn":  "avg_claim_amount",
+                                                         "sourceProviderType":  "decimal",
+                                                         "sourceLineageTag":  "avg_claim_amount",
+                                                         "summarizeBy":  "sum",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             },
+                                                                             {
+                                                                                 "name":  "PBI_FormatHint",
+                                                                                 "value":  "{\"isGeneralNumber\":true}"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "claim_frequency_label",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "claim_frequency_label",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "claim_frequency_label",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "combined_risk_label",
+                                                         "dataType":  "string",
+                                                         "sourceColumn":  "combined_risk_label",
+                                                         "sourceProviderType":  "varchar",
+                                                         "sourceLineageTag":  "combined_risk_label",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     },
+                                                     {
+                                                         "name":  "_gold_processed_ts",
+                                                         "dataType":  "dateTime",
+                                                         "sourceColumn":  "_gold_processed_ts",
+                                                         "formatString":  "General Date",
+                                                         "sourceProviderType":  "datetime2",
+                                                         "sourceLineageTag":  "_gold_processed_ts",
+                                                         "summarizeBy":  "none",
+                                                         "annotations":  [
+                                                                             {
+                                                                                 "name":  "SummarizationSetBy",
+                                                                                 "value":  "Automatic"
+                                                                             }
+                                                                         ]
+                                                     }
+                                                 ],
+                                     "partitions":  [
+                                                        {
+                                                            "name":  "{{Partition_Name}}",
+                                                            "mode":  "directLake",
+                                                            "source":  {
+                                                                           "type":  "entity",
+                                                                           "entityName":  "gold_policyholder_risk_profile",
+                                                                           "expressionSource":  "DatabaseQuery",
+                                                                           "schemaName":  "gold"
+                                                                       }
+                                                        }
+                                                    ],
+                                     "annotations":  [
+                                                         {
+                                                             "name":  "IsTableInBiModel",
+                                                             "value":  "False"
+                                                         }
+                                                     ]
+                                 }
+                             ],
+                  "expressions":  [
+                                      {
+                                          "name":  "DatabaseQuery",
+                                          "kind":  "m",
+                                          "expression":  "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+                                      }
+                                  ],
+                  "annotations":  [
+                                      {
+                                          "name":  "__PBI_TimeIntelligenceEnabled",
+                                          "value":  "0"
+                                      },
+                                      {
+                                          "name":  "SourceLineageTagType",
+                                          "value":  "DatabaseFullyQualifiedName"
+                                      }
+                                  ]
+              }
+}

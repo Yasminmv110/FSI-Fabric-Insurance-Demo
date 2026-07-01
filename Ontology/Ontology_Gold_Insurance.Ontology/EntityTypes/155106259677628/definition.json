@@ -1,0 +1,133 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+    "id":  "155106259677628",
+    "namespace":  "usertypes",
+    "baseEntityTypeId":  null,
+    "name":  "gold_fraud_flags",
+    "entityIdParts":  [
+
+                      ],
+    "displayNamePropertyId":  null,
+    "namespaceType":  "Imported",
+    "visibility":  "Visible",
+    "properties":  [
+                       {
+                           "id":  "8091757588337134901",
+                           "name":  "claim_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757567128293152",
+                           "name":  "claim_number",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757546399900191",
+                           "name":  "policyholder_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757522513106736",
+                           "name":  "adjuster_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757504114289139",
+                           "name":  "asset_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757478799367748",
+                           "name":  "policy_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757458774884148",
+                           "name":  "fraud_score",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "8091757438966016646",
+                           "name":  "fraud_risk_label",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "8091757415866054384",
+                           "name":  "flag_high_loss_vs_coverage",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       },
+                       {
+                           "id":  "8091757393895315329",
+                           "name":  "flag_filed_before_incident",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       },
+                       {
+                           "id":  "8091757374999006242",
+                           "name":  "flag_multiple_claims_same_asset",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       },
+                       {
+                           "id":  "8091757351450973739",
+                           "name":  "flag_low_approval_ratio",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       },
+                       {
+                           "id":  "8091757327848128439",
+                           "name":  "flag_adjuster_high_volume",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       },
+                       {
+                           "id":  "8091757305711579076",
+                           "name":  "flag_new_policy_claim",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       },
+                       {
+                           "id":  "8091757284908742339",
+                           "name":  "flag_repeat_policyholder",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       },
+                       {
+                           "id":  "8091757256651016131",
+                           "name":  "gold_processed_ts",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       }
+                   ],
+    "timeseriesProperties":  [
+
+                             ],
+    "untypedProperties":  [
+
+                          ]
+}

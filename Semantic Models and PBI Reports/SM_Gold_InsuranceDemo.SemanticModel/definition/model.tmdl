@@ -1,0 +1,21 @@
+﻿model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DirectLake - WH_Insurance"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit"]
+
+ref table gold_claims_by_adjuster
+ref table gold_avg_loss_by_claim_type
+ref table gold_fraud_flags
+ref table gold_claims_summary_by_office
+ref table gold_adjuster_performance
+ref table gold_policyholder_risk_profile
+

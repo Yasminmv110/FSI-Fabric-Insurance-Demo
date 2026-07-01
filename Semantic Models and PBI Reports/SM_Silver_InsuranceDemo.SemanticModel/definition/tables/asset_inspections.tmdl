@@ -1,0 +1,134 @@
+﻿table asset_inspections
+	lineageTag: 4a41ef98-aa1b-490e-bff1-3031b771e1dc
+	sourceLineageTag: [Silver].[asset_inspections]
+
+	column inspection_id
+		dataType: string
+		lineageTag: bf71e097-4b0f-49ae-b5a3-609de66091da
+		sourceLineageTag: inspection_id
+		summarizeBy: none
+		sourceColumn: inspection_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_id
+		dataType: string
+		lineageTag: ccfa6964-0d76-44a9-a549-9fcc9b04c36c
+		sourceLineageTag: asset_id
+		summarizeBy: none
+		sourceColumn: asset_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column office_id
+		dataType: string
+		lineageTag: 9abb1ebc-e5de-4afe-9800-30eb7169e9f8
+		sourceLineageTag: office_id
+		summarizeBy: none
+		sourceColumn: office_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column inspection_type
+		dataType: string
+		lineageTag: aaaefbc2-1fdc-4586-bb23-e7f9fe1a50f8
+		sourceLineageTag: inspection_type
+		summarizeBy: none
+		sourceColumn: inspection_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: f74a0801-bbd0-45dc-9fe1-7bc1669e4a2d
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheduled_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 69c3b6de-044f-4fd3-b7f2-50e8d5e312d6
+		sourceLineageTag: scheduled_date
+		summarizeBy: none
+		sourceColumn: scheduled_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column completed_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5a38abd1-a524-4f31-b30b-33653ef34a8b
+		sourceLineageTag: completed_date
+		summarizeBy: none
+		sourceColumn: completed_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column appraised_value
+		dataType: double
+		lineageTag: 7030f255-a9f6-4db3-aa5b-8be108c72a0d
+		sourceLineageTag: appraised_value
+		summarizeBy: sum
+		sourceColumn: appraised_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column inspector_notes
+		dataType: string
+		lineageTag: 67ac488c-dce6-4224-9b3c-cee3420a4c88
+		sourceLineageTag: inspector_notes
+		summarizeBy: none
+		sourceColumn: inspector_notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column condition_rating
+		dataType: string
+		lineageTag: 3c09a417-0f04-4bcf-823d-4668ee9f0d88
+		sourceLineageTag: condition_rating
+		summarizeBy: none
+		sourceColumn: condition_rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column _silver_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d41b942c-a341-4c77-bdbc-2bf428a20845
+		sourceLineageTag: _silver_processed_ts
+		summarizeBy: none
+		sourceColumn: _silver_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column _source
+		dataType: string
+		lineageTag: f219ef96-0677-4027-9871-d44c09343b6a
+		sourceLineageTag: _source
+		summarizeBy: none
+		sourceColumn: _source
+
+		annotation SummarizationSetBy = Automatic
+
+	column _is_valid
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: eafeb31b-0d5b-40db-ba73-fc86a73973a3
+		sourceLineageTag: _is_valid
+		summarizeBy: none
+		sourceColumn: _is_valid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition asset_inspections = entity
+		mode: directLake
+		source
+			entityName: asset_inspections
+			schemaName: Silver
+			expressionSource: 'DirectLake - LH_Insurance'
+

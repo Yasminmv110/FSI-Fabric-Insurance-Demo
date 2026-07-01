@@ -1,0 +1,64 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "d32df1d0-8ad2-41f9-b379-f203c4202430",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "policyholder_id",
+                                                                  "targetPropertyId":  "8091756585462263493"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "full_name",
+                                                                  "targetPropertyId":  "8091756561343386782"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policyholder_type",
+                                                                  "targetPropertyId":  "8091756537551138772"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "risk_score",
+                                                                  "targetPropertyId":  "8091756514422362577"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_policies",
+                                                                  "targetPropertyId":  "8091756491109339968"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_claims",
+                                                                  "targetPropertyId":  "8091756471121691212"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_estimated_loss",
+                                                                  "targetPropertyId":  "8091756450901708106"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_approved_amount",
+                                                                  "targetPropertyId":  "8091756427745409374"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_claim_amount",
+                                                                  "targetPropertyId":  "8091756406081694466"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "claim_frequency_label",
+                                                                  "targetPropertyId":  "8091756386688645513"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "combined_risk_label",
+                                                                  "targetPropertyId":  "8091756362103722136"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_gold_processed_ts",
+                                                                  "targetPropertyId":  "8091756341523245461"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "gold_policyholder_risk_profile",
+                                                                   "sourceSchema":  "gold"
+                                                               }
+                                 }
+}

@@ -1,0 +1,143 @@
+﻿table claim_events
+	lineageTag: 301bc9b8-13ec-411d-8e0e-d4127b22f92a
+	sourceLineageTag: [Silver].[claim_events]
+
+	column claim_event_id
+		dataType: string
+		lineageTag: ac620d7a-045d-479a-b4c0-52ce1aa57161
+		sourceLineageTag: claim_event_id
+		summarizeBy: none
+		sourceColumn: claim_event_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_number
+		dataType: string
+		lineageTag: 8eb6930a-baf4-459e-ba32-719ab3bbce92
+		sourceLineageTag: event_number
+		summarizeBy: none
+		sourceColumn: event_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column claim_id
+		dataType: string
+		lineageTag: 167534ac-c717-45db-9093-ba29e9c9c5b8
+		sourceLineageTag: claim_id
+		summarizeBy: none
+		sourceColumn: claim_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column adjuster_id
+		dataType: string
+		lineageTag: c1a8a311-c106-4697-b463-c8b9a481b42f
+		sourceLineageTag: adjuster_id
+		summarizeBy: none
+		sourceColumn: adjuster_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_type
+		dataType: string
+		lineageTag: 4a9b55ff-a606-48ca-9d8b-87f13f3e4653
+		sourceLineageTag: event_type
+		summarizeBy: none
+		sourceColumn: event_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 8ba63ccd-25dd-4ca1-bb27-004b959f7f97
+		sourceLineageTag: description
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 90abb6ec-b153-4228-8c64-2c607ead06fd
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2b7f9c1a-6827-4ffe-a881-a20e5db019e1
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column completed_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5f523d50-00fd-4458-9597-d287b34a9aec
+		sourceLineageTag: completed_at
+		summarizeBy: none
+		sourceColumn: completed_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes
+		dataType: string
+		lineageTag: 9973becb-0de3-4b0a-a531-7ad4ef65e95a
+		sourceLineageTag: notes
+		summarizeBy: none
+		sourceColumn: notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost_usd
+		dataType: double
+		lineageTag: ff71730a-d55d-4df5-8eb6-62532d065220
+		sourceLineageTag: cost_usd
+		summarizeBy: sum
+		sourceColumn: cost_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column _silver_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2e25938c-fd9f-4907-ba8f-34ec98805222
+		sourceLineageTag: _silver_processed_ts
+		summarizeBy: none
+		sourceColumn: _silver_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column _source
+		dataType: string
+		lineageTag: 784f0d38-5ff7-4a71-8382-b40d416233f0
+		sourceLineageTag: _source
+		summarizeBy: none
+		sourceColumn: _source
+
+		annotation SummarizationSetBy = Automatic
+
+	column _is_valid
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 40a42ec8-5c2c-4cf5-82a1-ebf28ae7aead
+		sourceLineageTag: _is_valid
+		summarizeBy: none
+		sourceColumn: _is_valid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition claim_events = entity
+		mode: directLake
+		source
+			entityName: claim_events
+			schemaName: Silver
+			expressionSource: 'DirectLake - LH_Insurance'
+

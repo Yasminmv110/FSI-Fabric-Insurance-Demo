@@ -1,0 +1,129 @@
+﻿table gold_policyholder_risk_profile
+	lineageTag: 5c8fcd35-f373-4ad1-95d4-4982b2b7ce8e
+	sourceLineageTag: [gold].[gold_policyholder_risk_profile]
+
+	column policyholder_id
+		dataType: string
+		lineageTag: 4bf3247c-aea7-44a8-8bc6-c62860a39c26
+		sourceLineageTag: policyholder_id
+		summarizeBy: none
+		sourceColumn: policyholder_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column full_name
+		dataType: string
+		lineageTag: 7b626140-860f-48fe-b665-12b8010916d8
+		sourceLineageTag: full_name
+		summarizeBy: none
+		sourceColumn: full_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column policyholder_type
+		dataType: string
+		lineageTag: eef1c3e1-761a-4aa0-84fd-53b902acb8a6
+		sourceLineageTag: policyholder_type
+		summarizeBy: none
+		sourceColumn: policyholder_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_score
+		dataType: int64
+		formatString: 0
+		lineageTag: 457762bc-9496-4fbb-8542-8f27323bc153
+		sourceLineageTag: risk_score
+		summarizeBy: none
+		sourceColumn: risk_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_policies
+		dataType: int64
+		formatString: 0
+		lineageTag: e21ab90c-bd64-4525-9038-b47dd0b050b7
+		sourceLineageTag: total_policies
+		summarizeBy: none
+		sourceColumn: total_policies
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: 47dd8616-dda5-4cb4-a8bd-a56904250ba5
+		sourceLineageTag: total_claims
+		summarizeBy: none
+		sourceColumn: total_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_estimated_loss
+		dataType: double
+		lineageTag: e8a86b10-8d76-4bc3-be8d-0e9b67adeaa0
+		sourceLineageTag: total_estimated_loss
+		summarizeBy: none
+		sourceColumn: total_estimated_loss
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_approved_amount
+		dataType: double
+		lineageTag: d3a7a3b5-3346-4afe-9f7c-1e4bb8c0f13a
+		sourceLineageTag: total_approved_amount
+		summarizeBy: none
+		sourceColumn: total_approved_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_claim_amount
+		dataType: double
+		lineageTag: 3cf38c8e-054e-4a13-8ccf-e6a590a7d04c
+		sourceLineageTag: avg_claim_amount
+		summarizeBy: none
+		sourceColumn: avg_claim_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column claim_frequency_label
+		dataType: string
+		lineageTag: 5b4b484d-0564-42e2-8c29-b3a279f769b7
+		sourceLineageTag: claim_frequency_label
+		summarizeBy: none
+		sourceColumn: claim_frequency_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column combined_risk_label
+		dataType: string
+		lineageTag: 18db4f8f-ae85-4d7e-b951-f466d21dd848
+		sourceLineageTag: combined_risk_label
+		summarizeBy: none
+		sourceColumn: combined_risk_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column _gold_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fe7a0938-535a-483e-9da0-6e136b1574d7
+		sourceLineageTag: _gold_processed_ts
+		summarizeBy: none
+		sourceColumn: _gold_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_policyholder_risk_profile = entity
+		mode: directLake
+		source
+			entityName: gold_policyholder_risk_profile
+			schemaName: gold
+			expressionSource: 'DirectLake - WH_Insurance'
+

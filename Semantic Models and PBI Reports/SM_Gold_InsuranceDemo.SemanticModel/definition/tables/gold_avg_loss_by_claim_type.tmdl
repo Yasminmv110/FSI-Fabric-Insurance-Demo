@@ -1,0 +1,128 @@
+﻿table gold_avg_loss_by_claim_type
+	lineageTag: 8313a5f3-9478-4996-93c9-06c3e5db879b
+	sourceLineageTag: [gold].[gold_avg_loss_by_claim_type]
+
+	column claim_type
+		dataType: string
+		lineageTag: bd666548-2d18-4881-ba71-18388cfc74f9
+		sourceLineageTag: claim_type
+		summarizeBy: none
+		sourceColumn: claim_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_claims
+		dataType: int64
+		formatString: 0
+		lineageTag: 064e07a4-0555-4554-b10f-150abbdb76e9
+		sourceLineageTag: total_claims
+		summarizeBy: sum
+		sourceColumn: total_claims
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_estimated_loss
+		dataType: double
+		lineageTag: 79b366a5-dfd3-482b-a2f6-73614e203612
+		sourceLineageTag: avg_estimated_loss
+		summarizeBy: sum
+		sourceColumn: avg_estimated_loss
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column max_estimated_loss
+		dataType: double
+		lineageTag: 6fb03f57-c7fa-493c-88be-d4dcf44c2580
+		sourceLineageTag: max_estimated_loss
+		summarizeBy: sum
+		sourceColumn: max_estimated_loss
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column min_estimated_loss
+		dataType: double
+		lineageTag: ab3be7aa-8cdf-456d-81a1-7110b9d49d2b
+		sourceLineageTag: min_estimated_loss
+		summarizeBy: sum
+		sourceColumn: min_estimated_loss
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_approved_amount
+		dataType: double
+		lineageTag: bb79b1e8-6086-498e-8e4a-ba07a2cee2b3
+		sourceLineageTag: avg_approved_amount
+		summarizeBy: sum
+		sourceColumn: avg_approved_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_approved_amount
+		dataType: double
+		lineageTag: 10239811-7fa1-4f61-ac27-4fd5bb29811f
+		sourceLineageTag: total_approved_amount
+		summarizeBy: sum
+		sourceColumn: total_approved_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_approval_rate_pct
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: bdd5f41d-cd3d-407c-b531-5454d7de7c65
+		sourceLineageTag: avg_approval_rate_pct
+		summarizeBy: sum
+		sourceColumn: avg_approval_rate_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column most_common_status
+		dataType: string
+		lineageTag: 6ffc6bc1-ccb0-416f-adf4-4543885fcbfc
+		sourceLineageTag: most_common_status
+		summarizeBy: none
+		sourceColumn: most_common_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_days_to_file
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 0d0baf44-66fc-4799-9746-a96474601fce
+		sourceLineageTag: avg_days_to_file
+		summarizeBy: sum
+		sourceColumn: avg_days_to_file
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column _gold_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2cfed252-f01e-40f4-a0fa-695fa990c7c8
+		sourceLineageTag: _gold_processed_ts
+		summarizeBy: none
+		sourceColumn: _gold_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_avg_loss_by_claim_type = entity
+		mode: directLake
+		source
+			entityName: gold_avg_loss_by_claim_type
+			schemaName: gold
+			expressionSource: 'DirectLake - WH_Insurance'
+

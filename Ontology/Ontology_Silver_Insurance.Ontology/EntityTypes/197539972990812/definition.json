@@ -1,0 +1,140 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+    "id":  "197539972990812",
+    "namespace":  "usertypes",
+    "baseEntityTypeId":  null,
+    "name":  "insured_assets",
+    "entityIdParts":  [
+                          "3996335836993647193"
+                      ],
+    "displayNamePropertyId":  null,
+    "namespaceType":  "Imported",
+    "visibility":  "Visible",
+    "properties":  [
+                       {
+                           "id":  "3996335836993647193",
+                           "name":  "asset_id",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335817981842836",
+                           "name":  "asset_number",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335791687023599",
+                           "name":  "asset_type",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335764663235297",
+                           "name":  "asset_description",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335745165642626",
+                           "name":  "make",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335723665593501",
+                           "name":  "model",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335691777269374",
+                           "name":  "year",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "BigInt"
+                       },
+                       {
+                           "id":  "3996335667637177977",
+                           "name":  "vin",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335643473616547",
+                           "name":  "address",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335621841867706",
+                           "name":  "city",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335596416486282",
+                           "name":  "state",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335575800276488",
+                           "name":  "estimated_value",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Double"
+                       },
+                       {
+                           "id":  "3996335557020225170",
+                           "name":  "condition",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335529480317360",
+                           "name":  "last_inspection_date",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996335507411089342",
+                           "name":  "silver_processed_ts",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "DateTime"
+                       },
+                       {
+                           "id":  "3996335487963983209",
+                           "name":  "source",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "String"
+                       },
+                       {
+                           "id":  "3996335462399385556",
+                           "name":  "is_valid",
+                           "redefines":  null,
+                           "baseTypeNamespaceType":  null,
+                           "valueType":  "Boolean"
+                       }
+                   ],
+    "timeseriesProperties":  [
+
+                             ],
+    "untypedProperties":  [
+
+                          ]
+}

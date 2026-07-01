@@ -1,0 +1,137 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+    "name":  "c484776dd9b8a04de4b7",
+    "position":  {
+                     "x":  632,
+                     "y":  18,
+                     "z":  3,
+                     "height":  283,
+                     "width":  332,
+                     "tabOrder":  3
+                 },
+    "visual":  {
+                   "visualType":  "areaChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "claims"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "claim_type"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "claims.claim_type",
+                                                                                             "nativeQueryRef":  "Count of claim_type",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "claims"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "estimated_loss"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  0
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "Sum(claims.estimated_loss)",
+                                                                                      "nativeQueryRef":  "Sum of estimated_loss"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Aggregation":  {
+                                                                                                           "Expression":  {
+                                                                                                                              "Column":  {
+                                                                                                                                             "Expression":  {
+                                                                                                                                                                "SourceRef":  {
+                                                                                                                                                                                  "Entity":  "claims"
+                                                                                                                                                                              }
+                                                                                                                                                            },
+                                                                                                                                             "Property":  "estimated_loss"
+                                                                                                                                         }
+                                                                                                                          },
+                                                                                                           "Function":  0
+                                                                                                       }
+                                                                                   },
+                                                                         "direction":  "Descending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Claims\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "82243de53490cd495576",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "claims"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "claim_type"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         },
+                                         {
+                                             "name":  "1ddda3ebed7d9f84d199",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "claims"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "estimated_loss"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  0
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         }
+                                     ]
+                     }
+}

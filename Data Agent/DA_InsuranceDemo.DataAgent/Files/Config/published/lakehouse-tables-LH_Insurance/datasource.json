@@ -1,0 +1,1510 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+    "artifactId":  "00000000-0000-0000-0000-000000000000",
+    "workspaceId":  "00000000-0000-0000-0000-000000000000",
+    "dataSourceInstructions":  null,
+    "displayName":  "LH_Insurance",
+    "type":  "lakehouse_tables",
+    "userDescription":  null,
+    "metadata":  {
+
+                 },
+    "elements":  [
+                     {
+                         "id":  "19bc931e-61f5-433d-9d81-586c6b8972a2",
+                         "is_selected":  false,
+                         "display_name":  "Schemas",
+                         "type":  "schema_grouping",
+                         "description":  null,
+                         "children":  [
+                                          {
+                                              "id":  "edfc673a-491f-4716-969b-81ad47444dfc",
+                                              "is_selected":  false,
+                                              "display_name":  "Silver",
+                                              "type":  "lakehouse_tables.schema",
+                                              "description":  null,
+                                              "children":  [
+                                                               {
+                                                                   "id":  "047a1e20-0042-44ad-9b7f-d0b533e5214e",
+                                                                   "is_selected":  false,
+                                                                   "display_name":  "Tables",
+                                                                   "type":  "table_grouping",
+                                                                   "description":  null,
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "fa46c300-9e0b-4d0f-8dae-66a77fc9e41a",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "adjusters",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "eb34f428-9fa1-4442-ad46-ae6058444dab",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "43257b2c-35fd-4ff2-bc0f-cdedc50dace1",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "99899c54-6aae-4ca0-ab33-e59d6bb3216f",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "22969fe0-b73d-4fe7-92b1-5ff23ba3c854",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "adjuster_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "cac6c157-f7bc-430e-aa07-9f07bd955fa2",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "email",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "064a0b1e-2bda-4b3a-9887-6fda567d2d7e",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "employee_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "4ada88ee-825b-40b5-b121-e4760967ab96",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "first_name",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "6dd49531-1f70-4876-8090-daac96b16843",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "hire_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "00d4862e-fa68-49cd-bdc4-aff7b392b82d",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "home_office_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "638969fd-217a-4347-ad1f-556a5e7ffc13",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "last_name",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "8a93e7c5-674d-451a-9750-cf7ea519da98",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "license_number",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "3b7dadf0-691f-46fe-b458-453b28f0d76f",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "license_state",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "f1c49076-29e7-4bdd-bfc0-7a3c25f6f0a5",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "max_active_claims",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "int",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "1c690820-ec46-4f90-be7b-add4e6800a02",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "phone",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "62a6fcd2-8378-49ce-8377-7160834ef033",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "specializations",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "3ba455d9-5ebe-4930-a093-0fe6084c4f81",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "status",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "eb69de56-1dd4-4537-b9aa-f257b1a24eb5",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "supervisor_email",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "f52c39c1-30ce-49e6-b644-6cb7ede99d19",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "asset_inspections",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "6db588ac-d121-47ca-9dcf-b848bf7dea64",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "0efbf169-5407-4001-9673-7410121a33c1",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "00b9a924-66a9-4fba-ba3e-c9a33d744d0b",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "8632070d-7546-46b4-8196-72500ca0bddf",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "appraised_value",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "7ff8fd56-87d3-4900-87f1-b2490edbc5ce",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "asset_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "954ec50a-9db8-4b7b-a740-9bb836975a91",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "completed_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "f07592a5-99ad-4f67-98eb-c38ab5aafbf0",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "condition_rating",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "480f975a-3984-4075-907a-9a2fc397e050",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "inspection_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "1e64d9e5-68f2-45c8-860b-ab65ee6ed5e7",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "inspection_type",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "72a4df5e-7be2-4b81-bb68-ce7860000545",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "inspector_notes",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "0ca60176-6778-4559-989f-d6dec3b08c35",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "office_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "2691988e-0e01-47ec-8360-d69f67b7f7a2",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "scheduled_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "0806bbea-452c-4573-96d1-7a03a9e5ff49",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "status",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "3f56c664-343a-4d08-87f3-44eea1a9b442",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "claim_events",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "a77c4e9f-f57f-4e41-ae24-1bdac4042bbb",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "f1ce412b-8aa1-402f-9e1b-bbe6158cc4d6",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "eb7fbab8-a70b-4daf-b8bc-e4dd64725218",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "c86cf348-0510-4567-9662-2b7e523c60c2",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "adjuster_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "743988d8-c474-4500-b38e-8b0e2cf202c5",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "claim_event_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "72ef4eb1-f84b-4698-bc64-8b6101fee44d",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "claim_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "df385704-25b5-4a45-a5e2-86f09583fd38",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "completed_at",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fd3c5560-c0e6-41dd-8679-cd6e1f4599fa",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "cost_usd",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "c9ac28f8-3556-44ba-8d1c-780fd0ce6d77",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "created_at",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "86c17a72-8532-4b35-bed9-246907fa9df4",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "description",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "88da5732-c60b-47b3-a35b-5b8d1e3768fe",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "event_number",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "0da5a950-8e2d-4f77-81a7-3d09fef121a6",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "event_type",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "6f831ffc-6609-4d0a-9191-d6b495f71855",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "notes",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "8118efbd-17d1-4205-bde3-9dff0f3f7a73",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "status",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "0a14b798-7080-476e-951e-3f95471ef11b",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "claims",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "95ad3e64-a19d-4852-97a5-b1e0b69f0b6a",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "3dd4fb49-7be9-4225-b604-ef2f701d9d03",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "369a9431-b531-4ba1-9970-5c0957236196",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "5850af1d-5967-4ae7-a452-dc2527ce606a",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "adjuster_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "5bc0e00d-d997-46c7-a4d6-d4d281022e7f",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "approved_amount",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "71027a43-c199-4734-a489-227207cb77f4",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "asset_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "c0c3c771-3bf3-408f-9a14-636f881dd8ef",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "claim_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "58b9a421-cda4-4129-b7c1-fd2209274203",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "claim_number",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "d685ac90-86af-4ecb-b4d6-6b76efcfed65",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "claim_type",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "3a59d765-e09e-4464-b2b6-1802f233031e",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "description",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "19701ed7-de2a-4f65-b31b-8c0ec8dfa1c2",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "estimated_loss",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "3672a08c-bfd2-4d97-aefa-33f545ef8562",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "filed_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "36067c89-80f7-4c75-b7ce-9831a19116cc",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "incident_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "d6eda62b-bc1b-4111-bc3e-9c97ae04b095",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "incident_latitude",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "b518b16c-700f-4919-9986-ae69224bced7",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "incident_longitude",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "646442c7-1954-4564-84ac-88019cb1bfc1",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "office_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "2507c670-d844-44d5-98e6-d803e8ceeaff",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policy_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "54bfc34d-f054-4405-9dc8-e2338f0e9946",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policyholder_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "b528360f-a4b4-4e87-afde-acffa60515c4",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "priority",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "7488622c-531a-4bae-8b56-d37b0aebe83f",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "status",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "10185145-f534-44ba-b17d-9e1163f40482",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "insured_assets",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "a5133d26-b06a-4192-af47-bf145227f14b",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "53b29944-fad2-463e-85d5-7616e1510fed",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "c1958b17-2e5a-45de-9c2d-7c234d6f29f4",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "086d2829-8164-4c77-b1c7-df024cac3a3a",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "address",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "a7ec8bc3-d61a-41d9-9edc-334d1b6d8de3",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "asset_description",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "f53c39ad-4db0-421a-b384-6bde9e095634",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "asset_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "c78aa53e-c478-406b-a7f0-33b061eab085",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "asset_number",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "d2b335be-4d14-4364-8798-2740dc8c1530",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "asset_type",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "6eac487e-2765-41b4-af69-705305fa23fb",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "city",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fe3aa7d4-46b7-48b1-8c98-9d7359cb6549",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "condition",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "667206ab-f1ab-4cfc-bf20-ec9f01adc7a3",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "estimated_value",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "adb5f441-a1c6-4b19-b6da-25502bc90bde",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "last_inspection_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "ca949603-3130-42e4-95c9-149482ca6f3b",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "make",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "d997868d-8015-4818-b9d4-47b8663f1713",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "model",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "c0c801f4-7a49-483c-b2f8-09469e4f021b",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "state",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "b30972d9-3266-4492-9f2a-0f0fa9470533",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "vin",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "e388c707-c7bb-47a5-a582-cc8b7c69a5cd",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "year",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "int",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "99d305d1-eace-4123-84c5-d7e6254efb21",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "offices",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "678c09a5-8ff9-4fef-a083-8ea19368c813",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "de0b5023-54d4-41c8-b9dc-ea44a34a8271",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "e59192e0-b572-4c1a-ab4b-62fbda32aca8",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "67b49d6f-dcd7-4d90-8fc6-764ff77d640b",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "address",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "f81e6389-9970-4bd9-98ec-df5fa5603439",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "adjuster_capacity",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "int",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "25cc69e1-e840-48ce-a198-e62b8d035f9c",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "city",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "89bd05d4-3fd4-47c7-94ce-44f22fb9df79",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "has_siu_unit",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "3e33226e-703b-48be-a36d-3996c7166ddc",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "latitude",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "595dfeee-72d2-46e4-a455-d120b27a0a96",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "longitude",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "a3761ae6-76a8-44bb-a7d2-4bfcc25a3f08",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "name",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "78e6912a-26fb-4357-b90d-857a4913b06c",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "office_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "776cab3a-05ca-496d-9cd8-34eb25f9997f",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "office_type",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "b633f034-b203-48aa-8465-75178333e433",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "phone",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "6046cf35-0f76-4ab4-a8ae-a0510d693d76",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "state",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "4b486675-7aba-4919-8730-988075ebeb1c",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "timezone",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "afc2a881-f6a0-4be4-a37a-35a6bc3566f9",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "zip_code",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "a64dab20-b758-4b27-921f-4857323ca84b",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "policies",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "25c05bad-864a-4864-8358-bcdd9f2d33d5",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "ee2f4cc6-e3dd-4acc-b154-47a51d17abee",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "9909bbd5-8c66-4900-b67e-73ffd45b2e7f",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fdbd3f87-3658-471e-91bd-bc1002cbe055",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "asset_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "256efd59-12d2-4a02-9949-51b73cfa4157",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "coverage_amount",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "decb5f33-3345-446b-9097-dc302589c982",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "deductible",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "e73e15dc-4a75-430c-90df-b4df10b658ca",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "effective_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "25b49c6e-e361-49fc-baee-1172a8a307dc",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "expiration_date",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "1fd9c724-ebb7-439b-aedc-6ab50171bba9",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policy_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "e53d728d-192a-4489-ad09-5491b160e6cb",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policy_number",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "98bb30a2-55b9-423f-9df4-9b850eb8733c",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policy_type",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "dee52435-9377-43b0-a79d-774ba4fd44c9",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policyholder_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "501488cd-5037-4d09-a773-c78ad3fbad66",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "premium_annual",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "float",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "d88692ee-41b4-45ac-9098-6e60e0ea40b3",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "status",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "d3f2eb22-254d-44d2-8e31-a1e6718bcac6",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "underwriter",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "baa72bb1-d6e2-48cf-912d-1d2bf6f11310",
+                                                                                        "is_selected":  true,
+                                                                                        "display_name":  "policyholders",
+                                                                                        "type":  "lakehouse_tables.table",
+                                                                                        "description":  null,
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "771042d8-e8d6-4555-8bba-602445965798",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_is_valid",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "bit",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "b321857a-0d3c-4d09-995d-22ea0ed4e530",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_silver_processed_ts",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "datetime2",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "f139705c-df14-4368-bcf8-7701f9c68653",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "_source",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "571a7221-b23e-4e7c-8db7-ddd972c2495f",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "address",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "e7b546b0-ae2f-4417-be51-4fe36cd41a26",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "city",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "cbc0d924-dca9-41ee-9253-b8f4785de404",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "date_of_birth",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "date",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "1a8d6b25-033b-4e66-860f-f77d28c8d914",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "email",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "e2efc526-45da-475f-8845-5ec40ecda53e",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "full_name",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "b4a5ea67-e272-4cd9-826e-4247faa1736c",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "phone",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "afad9c82-b4ad-47d0-a3a0-4de9817b75d7",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policyholder_id",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "81b895ec-99d5-4a58-8322-64bc1a2437ea",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policyholder_number",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "2f99f4e1-00db-436c-9783-eb732e433801",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "policyholder_type",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "eee48e44-1ab8-479b-ba9d-35f0af21c65b",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "risk_score",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "int",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "3944b102-08a0-4a1e-b6f8-2eaf5899cddd",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "state",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "cf8fb3a3-d8b6-4f97-86b6-9975288ecb99",
+                                                                                                             "is_selected":  true,
+                                                                                                             "display_name":  "zip_code",
+                                                                                                             "type":  "lakehouse_tables.column",
+                                                                                                             "data_type":  "varchar",
+                                                                                                             "description":  null,
+                                                                                                             "children":  [
+
+                                                                                                                          ]
+                                                                                                         }
+                                                                                                     ]
+                                                                                    }
+                                                                                ]
+                                                               }
+                                                           ]
+                                          }
+                                      ]
+                     }
+                 ]
+}

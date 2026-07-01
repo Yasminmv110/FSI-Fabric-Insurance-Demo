@@ -1,0 +1,13 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+    "namespace":  "usertypes",
+    "id":  "8091648426601020502",
+    "name":  "gold_fraud_flags_has_gold_adjuster_performance",
+    "namespaceType":  "Imported",
+    "source":  {
+                   "entityTypeId":  "155106259677628"
+               },
+    "target":  {
+                   "entityTypeId":  "119751769788371"
+               }
+}

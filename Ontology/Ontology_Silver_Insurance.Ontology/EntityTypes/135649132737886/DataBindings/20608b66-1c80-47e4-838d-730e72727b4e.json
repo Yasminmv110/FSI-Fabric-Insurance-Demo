@@ -1,0 +1,96 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "20608b66-1c80-47e4-838d-730e72727b4e",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "claim_id",
+                                                                  "targetPropertyId":  "3996333941159564889"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "adjuster_id",
+                                                                  "targetPropertyId":  "3996333808597801716"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "approved_amount",
+                                                                  "targetPropertyId":  "3996333618240520261"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "asset_id",
+                                                                  "targetPropertyId":  "3996333829385543054"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "claim_number",
+                                                                  "targetPropertyId":  "3996333913586798226"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "claim_type",
+                                                                  "targetPropertyId":  "3996333759584906551"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "description",
+                                                                  "targetPropertyId":  "3996333732678167559"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "estimated_loss",
+                                                                  "targetPropertyId":  "3996333642768280368"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "filed_date",
+                                                                  "targetPropertyId":  "3996333692481717928"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "incident_date",
+                                                                  "targetPropertyId":  "3996333714357845506"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "incident_latitude",
+                                                                  "targetPropertyId":  "3996333574333260410"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "incident_longitude",
+                                                                  "targetPropertyId":  "3996333549246519978"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_is_valid",
+                                                                  "targetPropertyId":  "3996333480073137441"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "office_id",
+                                                                  "targetPropertyId":  "3996333781971460697"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policy_id",
+                                                                  "targetPropertyId":  "3996333879956029219"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "policyholder_id",
+                                                                  "targetPropertyId":  "3996333853602818202"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "priority",
+                                                                  "targetPropertyId":  "3996333598144091627"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_silver_processed_ts",
+                                                                  "targetPropertyId":  "3996333526198066685"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_source",
+                                                                  "targetPropertyId":  "3996333507004573674"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "status",
+                                                                  "targetPropertyId":  "3996333666482499096"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "claims",
+                                                                   "sourceSchema":  "Silver"
+                                                               }
+                                 }
+}

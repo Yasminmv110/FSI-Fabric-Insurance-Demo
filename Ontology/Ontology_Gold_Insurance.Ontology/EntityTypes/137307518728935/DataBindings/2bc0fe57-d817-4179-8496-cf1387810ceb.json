@@ -1,0 +1,68 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+    "id":  "2bc0fe57-d817-4179-8496-cf1387810ceb",
+    "dataBindingConfiguration":  {
+                                     "dataBindingType":  "NonTimeSeries",
+                                     "propertyBindings":  [
+                                                              {
+                                                                  "sourceColumnName":  "office_id",
+                                                                  "targetPropertyId":  "8091757207788685981"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "office_name",
+                                                                  "targetPropertyId":  "8091757180222423709"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "city",
+                                                                  "targetPropertyId":  "8091757158066044146"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "state",
+                                                                  "targetPropertyId":  "8091757138574912488"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_claims",
+                                                                  "targetPropertyId":  "8091757116886533907"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "open_claims",
+                                                                  "targetPropertyId":  "8091757093030309006"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "closed_claims",
+                                                                  "targetPropertyId":  "8091757072857030286"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_estimated_loss",
+                                                                  "targetPropertyId":  "8091757053155767243"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "total_approved_amount",
+                                                                  "targetPropertyId":  "8091757027845842787"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "avg_loss_per_claim",
+                                                                  "targetPropertyId":  "8091757002934517185"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "fraud_flag_count",
+                                                                  "targetPropertyId":  "8091756981552049415"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "top_claim_type",
+                                                                  "targetPropertyId":  "8091756962196375619"
+                                                              },
+                                                              {
+                                                                  "sourceColumnName":  "_gold_processed_ts",
+                                                                  "targetPropertyId":  "8091756940123432889"
+                                                              }
+                                                          ],
+                                     "sourceTableProperties":  {
+                                                                   "sourceType":  "LakehouseTable",
+                                                                   "workspaceId":  "00000000-0000-0000-0000-000000000000",
+                                                                   "itemId":  "d684b964-250d-402d-9cec-2d5ead8ae9ab",
+                                                                   "sourceTableName":  "gold_claims_summary_by_office",
+                                                                   "sourceSchema":  "gold"
+                                                               }
+                                 }
+}

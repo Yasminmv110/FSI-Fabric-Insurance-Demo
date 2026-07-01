@@ -1,0 +1,12 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata":  {
+                     "type":  "DataAgent",
+                     "displayName":  "DA_InsuranceDemo",
+                     "description":  "Insurance Demo"
+                 },
+    "config":  {
+                   "version":  "2.0",
+                   "logicalId":  "07c67539-4e4d-45e6-9c84-16d4c0a026e3"
+               }
+}

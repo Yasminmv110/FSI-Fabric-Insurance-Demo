@@ -1,0 +1,169 @@
+﻿{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+    "name":  "89e1d520a569911e7a90",
+    "position":  {
+                     "x":  640.49960967993752,
+                     "y":  300.76502732240436,
+                     "z":  4,
+                     "height":  282.77907884465264,
+                     "width":  305.76112412177986,
+                     "tabOrder":  4
+                 },
+    "visual":  {
+                   "visualType":  "stackedAreaChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "insured_assets"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "condition"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "insured_assets.condition",
+                                                                                             "nativeQueryRef":  "condition",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Series":  {
+                                                                   "projections":  [
+                                                                                       {
+                                                                                           "field":  {
+                                                                                                         "Column":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "SourceRef":  {
+                                                                                                                                                             "Entity":  "insured_assets"
+                                                                                                                                                         }
+                                                                                                                                       },
+                                                                                                                        "Property":  "asset_type"
+                                                                                                                    }
+                                                                                                     },
+                                                                                           "queryRef":  "insured_assets.asset_type",
+                                                                                           "nativeQueryRef":  "asset_type"
+                                                                                       }
+                                                                                   ]
+                                                               },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "insured_assets"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "asset_id"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  5
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "CountNonNull(insured_assets.asset_id)",
+                                                                                      "nativeQueryRef":  "Count of asset_id"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Aggregation":  {
+                                                                                                           "Expression":  {
+                                                                                                                              "Column":  {
+                                                                                                                                             "Expression":  {
+                                                                                                                                                                "SourceRef":  {
+                                                                                                                                                                                  "Entity":  "insured_assets"
+                                                                                                                                                                              }
+                                                                                                                                                            },
+                                                                                                                                             "Property":  "asset_id"
+                                                                                                                                         }
+                                                                                                                          },
+                                                                                                           "Function":  5
+                                                                                                       }
+                                                                                   },
+                                                                         "direction":  "Descending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Insured Assets\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "52c3bb297b64e51d63cc",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "insured_assets"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "condition"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         },
+                                         {
+                                             "name":  "2f549e015010f725a682",
+                                             "field":  {
+                                                           "Aggregation":  {
+                                                                               "Expression":  {
+                                                                                                  "Column":  {
+                                                                                                                 "Expression":  {
+                                                                                                                                    "SourceRef":  {
+                                                                                                                                                      "Entity":  "insured_assets"
+                                                                                                                                                  }
+                                                                                                                                },
+                                                                                                                 "Property":  "asset_id"
+                                                                                                             }
+                                                                                              },
+                                                                               "Function":  5
+                                                                           }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "54822ecb8c58f1f93fa8",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "insured_assets"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "asset_type"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         }
+                                     ]
+                     }
+}

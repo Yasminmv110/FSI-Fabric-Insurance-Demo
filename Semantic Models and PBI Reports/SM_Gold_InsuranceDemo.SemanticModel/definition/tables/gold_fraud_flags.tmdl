@@ -1,0 +1,164 @@
+﻿table gold_fraud_flags
+	lineageTag: 48e3a321-f1b3-4aee-b658-eff8bac4301b
+	sourceLineageTag: [gold].[gold_fraud_flags]
+
+	column claim_id
+		dataType: string
+		lineageTag: 2323942e-dcf1-4b20-b0cb-fec244825e85
+		sourceLineageTag: claim_id
+		summarizeBy: none
+		sourceColumn: claim_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column claim_number
+		dataType: string
+		lineageTag: c3afd8eb-b0f4-480f-86da-e1d5b43dfeeb
+		sourceLineageTag: claim_number
+		summarizeBy: none
+		sourceColumn: claim_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column policyholder_id
+		dataType: string
+		lineageTag: c11ccc4b-1914-4764-afbb-e12ca2dd3e81
+		sourceLineageTag: policyholder_id
+		summarizeBy: none
+		sourceColumn: policyholder_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column adjuster_id
+		dataType: string
+		lineageTag: 66a41653-78d8-440a-becd-ed1706f774c5
+		sourceLineageTag: adjuster_id
+		summarizeBy: none
+		sourceColumn: adjuster_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_id
+		dataType: string
+		lineageTag: be008952-48e6-4d73-b4b4-1561050c4901
+		sourceLineageTag: asset_id
+		summarizeBy: none
+		sourceColumn: asset_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column policy_id
+		dataType: string
+		lineageTag: 5bfa1952-94e8-4054-b0fa-0b28374a8188
+		sourceLineageTag: policy_id
+		summarizeBy: none
+		sourceColumn: policy_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fraud_score
+		dataType: int64
+		formatString: 0
+		lineageTag: 660542e9-6e02-4e13-b2a8-8351c21604d6
+		sourceLineageTag: fraud_score
+		summarizeBy: sum
+		sourceColumn: fraud_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column fraud_risk_label
+		dataType: string
+		lineageTag: 85db715d-ab72-4a52-9eae-b0b86d4fe604
+		sourceLineageTag: fraud_risk_label
+		summarizeBy: none
+		sourceColumn: fraud_risk_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_high_loss_vs_coverage
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 76a53b6d-006e-498b-9243-81d42f03b732
+		sourceLineageTag: flag_high_loss_vs_coverage
+		summarizeBy: none
+		sourceColumn: flag_high_loss_vs_coverage
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_filed_before_incident
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6c2f2208-419a-49c8-b565-4c6162b6ad71
+		sourceLineageTag: flag_filed_before_incident
+		summarizeBy: none
+		sourceColumn: flag_filed_before_incident
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_multiple_claims_same_asset
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2eefcc7c-8983-4f98-b279-530b2af261fb
+		sourceLineageTag: flag_multiple_claims_same_asset
+		summarizeBy: none
+		sourceColumn: flag_multiple_claims_same_asset
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_low_approval_ratio
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e7bbc20b-5389-4f0d-8613-0a1c04e13fd1
+		sourceLineageTag: flag_low_approval_ratio
+		summarizeBy: none
+		sourceColumn: flag_low_approval_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_adjuster_high_volume
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2f37411b-73b8-47bf-bb55-4697cd3af12c
+		sourceLineageTag: flag_adjuster_high_volume
+		summarizeBy: none
+		sourceColumn: flag_adjuster_high_volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_new_policy_claim
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 54c43baf-f08c-48dd-8952-57e1a918e245
+		sourceLineageTag: flag_new_policy_claim
+		summarizeBy: none
+		sourceColumn: flag_new_policy_claim
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_repeat_policyholder
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4a5bc53d-cba3-41f3-9657-19949fb05d85
+		sourceLineageTag: flag_repeat_policyholder
+		summarizeBy: none
+		sourceColumn: flag_repeat_policyholder
+
+		annotation SummarizationSetBy = Automatic
+
+	column _gold_processed_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8b187642-fce4-41db-af83-e57b2df608be
+		sourceLineageTag: _gold_processed_ts
+		summarizeBy: none
+		sourceColumn: _gold_processed_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_fraud_flags = entity
+		mode: directLake
+		source
+			entityName: gold_fraud_flags
+			schemaName: gold
+			expressionSource: 'DirectLake - WH_Insurance'
+

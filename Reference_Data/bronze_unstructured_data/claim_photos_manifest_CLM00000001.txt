@@ -1,0 +1,4 @@
+Claim Photos Manifest — CLM00000001
+Photo 001 rear_bumper_straight_on (GPS 33.1507N 96.8236W)
+Photo 002 rear_suspension_undercarriage
+Photo 003 trunk_lid_aerial
