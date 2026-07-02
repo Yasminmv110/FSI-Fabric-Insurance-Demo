@@ -164,7 +164,7 @@ Before deploying, confirm that you have:
 - Ability to import `.ipynb` notebooks into a Fabric workspace.
 - Required preview features enabled as needed for Ontology and Data Agent.
 
-> The repository is currently hosted at `https://github.com/<owner>/FSI-Fabric-Medallion-Architecture-Insurance-Demo`.
+>`.
 
 ---
 
@@ -450,10 +450,4 @@ After deployment, verify:
 
 ---
 
-## 16. Limitations and Notes
 
-- This repository is intended to be safe for public sharing after replacing placeholder values with your own Fabric workspace, item, and Git provider settings.
-- Fabric Git integration is optional. The recommended jump-start path is manual notebook import plus REST item deployment.
-- If using `github_zip` mode with a private fork, store GitHub access tokens in Azure Key Vault. Do not paste secrets into notebooks.
-- The upload notebook stages structured CSVs to `Files/Bronze_Raw_Data` because that is the path consumed by the Bronze-to-Silver notebook.
-- The Warehouse contains only the six `gold_*` KPI tables. Deleted `Dim*` and `Fact*` objects are intentionally not referenced.
