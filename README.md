@@ -1,4 +1,4 @@
-﻿# FSI-Fabric-Medallion-Architecture-Insurance-Demo - Microsoft Fabric Insurance Jump Start
+﻿# FSI-Fabric-Medallion-Architecture-Insurance-Demo
 
 > End-to-end Microsoft Fabric jump-start solution for deploying an insurance analytics workspace with Lakehouse, Warehouse, notebooks, pipeline orchestration, semantic models, Power BI report, ontologies, Data Agent configuration, and bundled reference data.
 
