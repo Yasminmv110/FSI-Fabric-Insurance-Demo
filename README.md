@@ -178,8 +178,9 @@ The primary path does **not** require connecting the Fabric workspace to GitHub.
 | 3 | Run the provision notebook (Run all) to create the workspace, `LH_Insurance`, and `WH_Insurance`, and print both SQL endpoints | Workspace, Lakehouse, Warehouse |
 | 4 | **Manually upload the reference data** from this GitHub repo into `LH_Insurance` | Lakehouse Files |
 | 5 | **Manually run** `02_insurance_bronze_to_silver` to build the Silver Delta tables | Silver tables |
-| 6 | **Manually run** the stored procedure `gold.usp_Load_Silver_to_Gold` to load the Gold KPI tables | Gold tables |
-| 7 | Review semantic models, report, ontology, and Data Agent assets | Fabric workspace items |
+| 6 | **Create** the `gold` schema, KPI tables, and `usp_Load_Silver_to_Gold` procedure in `WH_Insurance` | Warehouse objects |
+| 7 | **Manually run** the stored procedure `gold.usp_Load_Silver_to_Gold` to load the Gold KPI tables | Gold tables |
+| 8 | Review semantic models, report, ontology, and Data Agent assets | Fabric workspace items |
 
 ### Recommended deployment path
 
@@ -190,7 +191,7 @@ The primary path does **not** require connecting the Fabric workspace to GitHub.
    - `WORKSPACE_ID` (to provision into an existing workspace), **or** leave it blank and set `CAPACITY_ID` to create/reuse the workspace named `TARGET_WORKSPACE_DISPLAY_NAME`.
 5. Run all cells. The notebook creates `LH_Insurance` and `WH_Insurance` (idempotent) and prints the Lakehouse and Warehouse SQL endpoint connection strings.
 6. Open the target workspace and confirm the Lakehouse and Warehouse exist.
-7. Complete the manual data-load steps in sections 6.1–6.3 below.
+7. Complete the manual data-load steps in sections 6.1–6.4 below.
 
 ### 6.1. Manually upload the reference data from GitHub
 
@@ -205,13 +206,40 @@ Confirm the eight structured CSVs are present under `Files/Bronze_Raw_Data/` bef
 
 Import and run `Downloadable_Notebooks/02_insurance_bronze_to_silver.ipynb` with `LH_Insurance` attached as the default lakehouse. It reads `Files/Bronze_Raw_Data/*.csv`, then cleans, casts, deduplicates, and validates the data into the eight Silver Delta tables under the `Silver` schema in `LH_Insurance`.
 
-### 6.3. Manually run the Silver-to-Gold stored procedure
+### 6.3. Create the Silver-to-Gold stored procedure in `WH_Insurance`
 
-Load the Gold KPI tables by running the Warehouse stored procedure `gold.usp_Load_Silver_to_Gold` against `WH_Insurance`:
+Before the Gold load can run, the `gold` schema, the six `gold_*` KPI tables, and the `gold.usp_Load_Silver_to_Gold` stored procedure must exist in `WH_Insurance`. The DDL for all of these is source-controlled under `Fabric Data Stores/WH_Insurance.Warehouse/gold/`:
 
-1. Ensure the `gold` schema, the six `gold_*` tables, and `gold.usp_Load_Silver_to_Gold` exist in `WH_Insurance`. Deploy them from `Fabric Data Stores/WH_Insurance.Warehouse/gold/` (via Fabric Git integration or by running the SQL in the Warehouse editor) if they are not already present.
-2. Connect to `WH_Insurance` using the Warehouse SQL endpoint printed by the provision notebook (Fabric SQL editor, SSMS, or Azure Data Studio).
-3. Execute the stored procedure:
+| Object | Repository source |
+|---|---|
+| `gold` schema | `gold/gold.sql` |
+| Six `gold_*` KPI tables | `gold/Tables/gold_*.sql` |
+| `gold.usp_Load_Silver_to_Gold` | `gold/StoredProcedures/usp_Load_Silver_to_Gold.sql` |
+
+To create them:
+
+1. Connect to `WH_Insurance` using the Warehouse SQL endpoint printed by the provision notebook (Fabric SQL editor, SSMS, or Azure Data Studio).
+2. Run `gold/gold.sql` (creates the `gold` schema), then each file in `gold/Tables/` (creates the six KPI tables).
+3. Run `gold/StoredProcedures/usp_Load_Silver_to_Gold.sql` to create the procedure:
+
+   ```sql
+   CREATE PROCEDURE gold.usp_Load_Silver_to_Gold
+   AS
+   -- Loads all six gold.* KPI tables from LH_Insurance.Silver.* via
+   -- cross-database (3-part naming) reads against the Lakehouse SQL endpoint.
+   ...
+   ```
+
+   Run the file's full contents as-is from the repository (the snippet above is only the header). If you are re-deploying, change `CREATE PROCEDURE` to `CREATE OR ALTER PROCEDURE` to make it idempotent.
+
+> If your Fabric workspace is connected to Git, syncing the repository deploys these `WH_Insurance` objects automatically and you can skip the manual DDL.
+
+### 6.4. Manually run the Silver-to-Gold stored procedure
+
+With the procedure created (section 6.3) and the Silver tables loaded (section 6.2), load the Gold KPI tables:
+
+1. Connect to `WH_Insurance` using the Warehouse SQL endpoint.
+2. Execute the stored procedure:
 
    ```sql
    EXEC gold.usp_Load_Silver_to_Gold;
