@@ -21,7 +21,6 @@
 13. [Semantic Models and Report](#13-semantic-models-and-report)
 14. [Ontologies and Data Agent](#14-ontologies-and-data-agent)
 15. [Validation Checklist](#15-validation-checklist)
-16. [Limitations and Notes](#16-limitations-and-notes)
 
 ---
 
@@ -170,35 +169,59 @@ Before deploying, confirm that you have:
 
 ## 6. End-to-End Deployment Flow
 
-The primary path does **not** require connecting the Fabric workspace to GitHub. Users download notebooks from this repository, import them into Fabric, and run them.
+The primary path does **not** require connecting the Fabric workspace to GitHub. The provision notebook creates only the **data stores** (workspace, Lakehouse, Warehouse) programmatically and idempotently. Loading data is done through a few explicit manual steps afterward.
 
 | Step | Action | Fabric item |
 |---:|---|---|
 | 1 | Download this repository as a ZIP from GitHub | Local browser/download |
 | 2 | Import `Downloadable_Notebooks/00_provision_fabric_workspace_and_items.ipynb` into any Fabric workspace | Fabric notebook |
-| 3 | Run the provision notebook with `RUN_REST_ITEM_DEPLOYMENT = True` | Creates workspace/items from repository ZIP |
-| 4 | Run `01_upload_reference_data_to_lakehouse.ipynb` or the deployed upload notebook | Uploads/stages `Reference_Data` |
-| 5 | Run `02_insurance_bronze_to_silver.ipynb` or the deployed medallion pipeline | Builds Silver tables |
-| 6 | Run the deployed pipeline or stored procedure step | Loads Gold KPI tables |
+| 3 | Run the provision notebook (Run all) to create the workspace, `LH_Insurance`, and `WH_Insurance`, and print both SQL endpoints | Workspace, Lakehouse, Warehouse |
+| 4 | **Manually upload the reference data** from this GitHub repo into `LH_Insurance` | Lakehouse Files |
+| 5 | **Manually run** `02_insurance_bronze_to_silver` to build the Silver Delta tables | Silver tables |
+| 6 | **Manually run** the stored procedure `gold.usp_Load_Silver_to_Gold` to load the Gold KPI tables | Gold tables |
 | 7 | Review semantic models, report, ontology, and Data Agent assets | Fabric workspace items |
 
-### Recommended no-Git deployment path
+### Recommended deployment path
 
 1. Download this repository as a ZIP.
 2. In Fabric, create or open a bootstrap workspace.
 3. Import `Downloadable_Notebooks/00_provision_fabric_workspace_and_items.ipynb`.
-4. Set:
-   - `CAPACITY_ID`
-   - `RUN_REST_ITEM_DEPLOYMENT = True`
-   - `SOURCE_MODE = "github_zip"` and `SOURCE_REPO_ZIP_URL` to your public repository archive URL, **or**
-   - `SOURCE_MODE = "lakehouse_zip"` and `SOURCE_ZIP_FILE_PATH` after uploading the repository ZIP to Lakehouse Files.
-5. Run all cells in the provision notebook.
-6. Open the created target workspace and confirm the Fabric items were created.
-7. Run the upload notebook and then the medallion pipeline.
+4. In the notebook **Configuration** cell, set:
+   - `WORKSPACE_ID` (to provision into an existing workspace), **or** leave it blank and set `CAPACITY_ID` to create/reuse the workspace named `TARGET_WORKSPACE_DISPLAY_NAME`.
+5. Run all cells. The notebook creates `LH_Insurance` and `WH_Insurance` (idempotent) and prints the Lakehouse and Warehouse SQL endpoint connection strings.
+6. Open the target workspace and confirm the Lakehouse and Warehouse exist.
+7. Complete the manual data-load steps in sections 6.1–6.3 below.
+
+### 6.1. Manually upload the reference data from GitHub
+
+Load the bundled Bronze CSVs from this GitHub repository into `LH_Insurance`. Use either option:
+
+- **Option A — run the upload notebook**: import and run `Downloadable_Notebooks/01_upload_reference_data_to_lakehouse.ipynb` (with `LH_Insurance` attached as its default lakehouse). It downloads the repo archive and stages the files automatically.
+- **Option B — upload by hand**: from the GitHub repo, download the `Reference_Data/bronze_structured_data/*.csv` files, then in the Fabric portal open `LH_Insurance` and upload them into **`Files/Bronze_Raw_Data/`** (the path the Bronze-to-Silver notebook reads). Optionally also stage `Reference_Data/bronze_unstructured_data/*` into `Files/Bronze_Unstructured_Data/`.
+
+Confirm the eight structured CSVs are present under `Files/Bronze_Raw_Data/` before continuing.
+
+### 6.2. Manually run the Bronze-to-Silver notebook
+
+Import and run `Downloadable_Notebooks/02_insurance_bronze_to_silver.ipynb` with `LH_Insurance` attached as the default lakehouse. It reads `Files/Bronze_Raw_Data/*.csv`, then cleans, casts, deduplicates, and validates the data into the eight Silver Delta tables under the `Silver` schema in `LH_Insurance`.
+
+### 6.3. Manually run the Silver-to-Gold stored procedure
+
+Load the Gold KPI tables by running the Warehouse stored procedure `gold.usp_Load_Silver_to_Gold` against `WH_Insurance`:
+
+1. Ensure the `gold` schema, the six `gold_*` tables, and `gold.usp_Load_Silver_to_Gold` exist in `WH_Insurance`. Deploy them from `Fabric Data Stores/WH_Insurance.Warehouse/gold/` (via Fabric Git integration or by running the SQL in the Warehouse editor) if they are not already present.
+2. Connect to `WH_Insurance` using the Warehouse SQL endpoint printed by the provision notebook (Fabric SQL editor, SSMS, or Azure Data Studio).
+3. Execute the stored procedure:
+
+   ```sql
+   EXEC gold.usp_Load_Silver_to_Gold;
+   ```
+
+The procedure reads the Silver tables from the Lakehouse SQL analytics endpoint via 3-part naming (`LH_Insurance.Silver.<table>`) and loads all six Gold KPI tables — no shortcuts required.
 
 ### Optional Fabric Git path
 
-Advanced users can still use Fabric Git integration by setting `RUN_GIT_SYNC = True` in `provision_fabric_workspace_and_items`, but it is not required for the jump-start path.
+Advanced users can still connect the Fabric workspace to Git to sync the full item definitions (notebooks, semantic models, report, ontologies, pipeline). This is not required for the jump-start path.
 
 ---
 
@@ -208,7 +231,7 @@ Use the notebooks in `Downloadable_Notebooks/` when you want to import notebooks
 
 | Notebook | Purpose | Run order |
 |---|---|---:|
-| `00_provision_fabric_workspace_and_items.ipynb` | Creates or reuses the target workspace and deploys Fabric items through REST APIs | 1 |
+| `00_provision_fabric_workspace_and_items.ipynb` | Creates or reuses the target workspace, Lakehouse, and Warehouse via REST APIs | 1 |
 | `01_upload_reference_data_to_lakehouse.ipynb` | Uploads/stages repository reference data into `LH_Insurance` Files | 2 |
 | `02_insurance_bronze_to_silver.ipynb` | Builds Silver Delta tables from structured Bronze CSVs | 3 |
 
@@ -287,22 +310,15 @@ The notebook validates that all expected structured CSVs and unstructured demo f
 
 ### `provision_fabric_workspace_and_items`
 
-Creates or reuses the `FSI-Fabric-Medallion-Architecture-Insurance-Demo` workspace and deploys the Fabric items from this repository.
+Creates or reuses the `FSI-Fabric-Medallion-Architecture-Insurance-Demo` workspace and provisions the core data stores (`LH_Insurance` Lakehouse and `WH_Insurance` Warehouse) via the Fabric REST API. It is idempotent and also prints the Lakehouse and Warehouse SQL endpoint connection strings. It does **not** load data — the reference-data upload, Bronze-to-Silver notebook, and Silver-to-Gold stored procedure are run manually (see section 6).
 
 Key configuration:
 
+- `WORKSPACE_ID` (provision into an existing workspace), or leave blank to create/reuse by name
 - `TARGET_WORKSPACE_DISPLAY_NAME`
 - `CAPACITY_ID`
-- `RUN_REST_ITEM_DEPLOYMENT`
-- `SOURCE_MODE`
-- `SOURCE_REPO_ZIP_URL`
-- `SOURCE_ZIP_FILE_PATH`
-
-Optional Git configuration:
-
-- `RUN_GIT_SYNC`
-- `GIT_PROVIDER_TYPE`
-- `GIT_CONNECTION_ID`
+- `LAKEHOUSE_NAME`
+- `WAREHOUSE_NAME`
 
 ### `upload_reference_data_to_lakehouse`
 
@@ -449,5 +465,4 @@ After deployment, verify:
 11. `Pl_Insurance_Medallion` completes successfully.
 
 ---
-
 
